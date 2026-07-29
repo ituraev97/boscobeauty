@@ -7,6 +7,7 @@
 //   TELEGRAM_CHAT_ID   — id чата/группы, куда слать заявки
 
 const FORM_TITLES = {
+  'zayavka-main': 'Главная страница',
   'zayavka-manicure': 'Маникюр и педикюр',
   'zayavka-brows': 'Брови и ресницы',
   'zayavka-hair': 'Волосы',
@@ -40,13 +41,31 @@ exports.handler = async (event) => {
 
   const data = (payload && payload.data) || {};
   const formName = (payload && payload.form_name) || '';
-  const section = FORM_TITLES[formName] || formName || '—';
+
+  if (!Object.prototype.hasOwnProperty.call(FORM_TITLES, formName)) {
+    console.error('Неизвестная форма:', formName);
+    return { statusCode: 200, body: 'unknown form' };
+  }
+
+  if (data['bot-field']) {
+    console.error('Сработала honeypot-защита для формы', formName);
+    return { statusCode: 200, body: 'spam' };
+  }
+
+  const name = String(data.name || '').trim();
+  const phone = String(data.phone || '').trim();
+  if (!name || !phone) {
+    console.error('Пустое имя или телефон в заявке', formName);
+    return { statusCode: 200, body: 'invalid payload' };
+  }
+
+  const section = FORM_TITLES[formName];
 
   const lines = [
     '🌿 <b>Новая заявка с сайта</b>',
     '',
-    `👤 <b>Имя:</b> ${escapeHtml(data.name)}`,
-    `📞 <b>Телефон:</b> ${escapeHtml(data.phone)}`,
+    `👤 <b>Имя:</b> ${escapeHtml(name)}`,
+    `📞 <b>Телефон:</b> ${escapeHtml(phone)}`,
     `💅 <b>Услуга:</b> ${escapeHtml(data.service)}`,
     `🕐 <b>Удобное время:</b> ${escapeHtml(data.time) || '—'}`,
     '',
