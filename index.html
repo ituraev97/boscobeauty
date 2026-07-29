@@ -181,8 +181,10 @@
   .awards-text{flex:1; min-width:230px;}
   .awards-text b{display:block; font-family:'Bodoni Moda',serif; font-size:21px; font-weight:500; color:var(--ink); margin-bottom:8px;}
   .awards-text p{font-size:14px; color:#4a423b; margin-bottom:16px;}
-  .rating-badges{display:flex; align-items:center; gap:14px; flex-wrap:wrap;}
-  .rating-badges iframe{border:0; border-radius:6px; max-width:100%;}
+  .rating-badges{display:flex; align-items:center; gap:16px; flex-wrap:wrap;}
+  /* both badges are natively 150x50; scaled up equally so they match in size */
+  .rating-badge{width:195px; height:65px; overflow:hidden; border-radius:8px; flex-shrink:0;}
+  .rating-badge iframe{width:150px; height:50px; border:0; display:block; transform:scale(1.3); transform-origin:0 0;}
 
   /* 2GIS WIDGET */
   .gis-widget{width:100%; max-width:528px; border-radius:8px; overflow:hidden; border:1px solid rgba(29,24,21,.12); background:#fff;}
@@ -434,7 +436,8 @@
         <b data-ru="Премия 2ГИС 2026" data-uz="2GIS mukofoti 2026" data-en="2GIS Award 2026" data-zh="2GIS 2026 年度奖项"></b>
         <p data-ru="Награда присуждается организациям с самыми высокими оценками и отзывами пользователей 2ГИС." data-uz="Mukofot 2GIS foydalanuvchilaridan eng yuqori baho va sharhlarni olgan tashkilotlarga beriladi." data-en="The award goes to businesses with the highest ratings and user reviews on 2GIS." data-zh="该奖项授予在 2GIS 上获得最高评分与用户好评的商家。"></p>
         <div class="rating-badges">
-          <iframe src="https://yandex.ru/sprav/widget/rating-badge/242620227906?type=rating" width="150" height="50" frameborder="0" loading="lazy" title="Yandex rating"></iframe>
+          <div class="rating-badge"><iframe src="https://yandex.ru/sprav/widget/rating-badge/242620227906?type=rating" width="150" height="50" frameborder="0" loading="lazy" title="Рейтинг на Яндекс Картах"></iframe></div>
+          <div class="rating-badge"><iframe src="https://widget.2gis.ru/api/widget?org_id=70000001077188387&amp;branch_id=70000001077188388&amp;size=medium&amp;theme=light" width="150" height="50" frameborder="0" loading="lazy" title="Рейтинг на 2ГИС"></iframe></div>
         </div>
       </div>
     </div>
