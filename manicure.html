@@ -165,14 +165,39 @@
   .svc-row .desc{font-size:13px; color:rgba(248,243,234,.5); margin-top:4px; max-width:460px;}
   .svc-row .price{font-weight:600; color:#e9c98f; white-space:nowrap; font-size:15px;}
 
+  /* LEAD FORM */
+  .form-section{background:var(--wine-dark); color:#fff;}
+  .form-section .eyebrow{color:#e9c98f; justify-content:center;}
+  .form-section h2{font-size:clamp(26px,4vw,40px); font-weight:500; max-width:640px; margin:0 auto 10px; text-align:center;}
+  .form-section .lead{color:rgba(248,243,234,.72); max-width:470px; margin:0 auto 34px; text-align:center; font-size:15.5px;}
+  .form-card{background:var(--cream); color:var(--ink); border-radius:10px; padding:30px; max-width:540px; margin:0 auto; box-shadow:0 18px 44px rgba(0,0,0,.22);}
+  .form-row{margin-bottom:15px;}
+  .form-row label{display:block; font-size:12.5px; font-weight:600; margin-bottom:6px; color:#5a5148; letter-spacing:.2px;}
+  .form-row input, .form-row select{width:100%; padding:13px 14px; border:1px solid #ddd2bf; border-radius:8px; font-family:'Jost',sans-serif; font-size:15px; background:#fff; color:var(--ink);}
+  .form-row input:focus, .form-row select:focus{outline:2px solid var(--wine); outline-offset:1px; border-color:var(--wine);}
+  .form-submit{width:100%; background:var(--wine); color:#fff; border:none; padding:16px; border-radius:32px; font-family:'Jost',sans-serif; font-weight:700; font-size:15px; cursor:pointer; transition:background .2s ease; margin-top:6px;}
+  .form-submit:hover{background:#5a2229;}
+  .form-submit:disabled{opacity:.6; cursor:default;}
+  .form-note{font-size:11.5px; color:#7a7167; margin-top:13px; text-align:center; line-height:1.5;}
+  .form-note a{text-decoration:underline;}
+  .form-alt{text-align:center; margin-top:26px; font-size:14px; color:rgba(248,243,234,.65);}
+  .form-alt a{color:#e9c98f; text-decoration:underline;}
+  .form-ok{display:none; text-align:center; padding:26px 6px;}
+  .form-ok b{display:block; font-family:'Bodoni Moda',serif; font-size:23px; font-weight:500; margin-bottom:10px;}
+  .form-ok span{font-size:14.5px; color:#4a423b;}
+  .form-err{display:none; margin-top:12px; font-size:13px; color:#a3282f; text-align:center;}
+  .hp{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;}
+
   /* AWARDS */
   .awards{display:flex; align-items:center; gap:34px; background:#fff; border:1px solid #e7dccb; border-radius:8px; padding:26px 30px; margin-bottom:30px; flex-wrap:wrap;}
   .award-badge{height:170px; width:auto; flex-shrink:0; filter:drop-shadow(0 8px 20px rgba(29,24,21,.16));}
   .awards-text{flex:1; min-width:230px;}
   .awards-text b{display:block; font-family:'Bodoni Moda',serif; font-size:21px; font-weight:500; color:var(--ink); margin-bottom:8px;}
   .awards-text p{font-size:14px; color:#4a423b; margin-bottom:16px;}
-  .rating-badges{display:flex; align-items:center; gap:14px; flex-wrap:wrap;}
-  .rating-badges iframe{border:0; border-radius:6px; max-width:100%;}
+  .rating-badges{display:flex; align-items:center; gap:16px; flex-wrap:wrap;}
+  /* both badges are natively 150x50; scaled up equally so they match in size */
+  .rating-badge{width:195px; height:65px; overflow:hidden; border-radius:8px; flex-shrink:0;}
+  .rating-badge iframe{width:150px; height:50px; border:0; display:block; transform:scale(1.3); transform-origin:0 0;}
 
   /* 2GIS WIDGET */
   .gis-widget{width:100%; max-width:528px; border-radius:8px; overflow:hidden; border:1px solid rgba(29,24,21,.12); background:#fff;}
@@ -266,8 +291,8 @@
     <h1 data-ru="Маникюр и педикюр <i>в самом центре Ташкента</i>" data-en="Manicure and pedicure <i>in the heart of Tashkent</i>" data-zh="美甲与美足 <i>就在塔什干市中心</i>" data-uz="Toshkent markazida <i>manikyur va pedikyur</i>"></h1>
     <p class="sub" data-ru="Женский и мужской маникюр, педикюр, наращивание ногтей — стерильные инструменты, честные цены, мастера с рейтингом 4.9–5.0." data-en="Manicure and pedicure for women and men, plus nail extensions — sterile tools, fair prices, specialists rated 4.9–5.0." data-zh="为女性和男性提供美甲、美足及延长甲服务——器械严格消毒，价格公道，技师评分 4.9–5.0。" data-uz="Ayollar va erkaklar uchun manikyur, pedikyur, tirnoq uzaytirish — steril asboblar, halol narxlar, 4.9–5.0 reytingli ustalar."></p>
     <div class="hero-ctas">
-      <a class="btn-solid dikidi-widget" href="https://dikidi.net/#widget=214399" data-ru="Записаться онлайн 24/7 · Dikidi" data-en="Book online 24/7 · Dikidi" data-zh="24小时在线预约 · Dikidi" data-uz="24/7 onlayn yozilish · Dikidi"></a>
-      <a class="btn-line" href="https://t.me/boscobeauty" target="_blank" data-ru="Написать в Telegram" data-en="Message on Telegram" data-zh="通过 Telegram 联系" data-uz="Telegramda yozish"></a>
+      <a class="btn-solid" href="#zayavka" data-ru="Оставить заявку" data-uz="Ariza qoldirish" data-en="Leave a request" data-zh="留下申请"></a>
+      <a class="btn-line dikidi-widget" href="https://dikidi.net/#widget=214399" data-ru="Записаться онлайн 24/7 · Dikidi" data-uz="24/7 onlayn yozilish · Dikidi" data-en="Book online 24/7 · Dikidi" data-zh="24小时在线预约 · Dikidi"></a>
     </div>
     <div class="stat-row">
       <div><b>4.9–5.0</b><span data-ru="рейтинг на картах" data-en="rating on maps" data-zh="地图评分" data-uz="xaritalardagi reyting"></span></div>
@@ -327,7 +352,7 @@
     </div>
     <p style="margin-top:22px; font-size:13px; color:rgba(248,243,234,.5);" data-ru="Полный прайс — при онлайн-записи или у администратора." data-en="See the full price list when booking online or ask the front desk." data-zh="完整价目请在线预约时查看或咨询前台。" data-uz="To‘liq narxlar ro‘yxati — onlayn yozilishda yoki administratordan."></p>
     <div style="margin-top:28px;">
-      <a class="btn-solid dikidi-widget" href="https://dikidi.net/#widget=214399" data-ru="Записаться онлайн 24/7 · Dikidi" data-en="Book online 24/7 · Dikidi" data-zh="24小时在线预约 · Dikidi" data-uz="24/7 onlayn yozilish · Dikidi"></a>
+      <a class="btn-solid" href="#zayavka" data-ru="Оставить заявку" data-uz="Ariza qoldirish" data-en="Leave a request" data-zh="留下申请"></a>
     </div>
   </div>
 </section>
@@ -344,7 +369,8 @@
         <b data-ru="Премия 2ГИС 2026" data-uz="2GIS mukofoti 2026" data-en="2GIS Award 2026" data-zh="2GIS 2026 年度奖项"></b>
         <p data-ru="Награда присуждается организациям с самыми высокими оценками и отзывами пользователей 2ГИС." data-uz="Mukofot 2GIS foydalanuvchilaridan eng yuqori baho va sharhlarni olgan tashkilotlarga beriladi." data-en="The award goes to businesses with the highest ratings and user reviews on 2GIS." data-zh="该奖项授予在 2GIS 上获得最高评分与用户好评的商家。"></p>
         <div class="rating-badges">
-          <iframe src="https://yandex.ru/sprav/widget/rating-badge/242620227906?type=rating" width="150" height="50" frameborder="0" loading="lazy" title="Yandex rating"></iframe>
+          <div class="rating-badge"><iframe src="https://yandex.ru/sprav/widget/rating-badge/242620227906?type=rating" width="150" height="50" frameborder="0" loading="lazy" title="Рейтинг на Яндекс Картах"></iframe></div>
+          <div class="rating-badge"><iframe src="https://widget.2gis.ru/api/widget?org_id=70000001077188387&amp;branch_id=70000001077188388&amp;size=medium&amp;theme=light" width="150" height="50" frameborder="0" loading="lazy" title="Рейтинг на 2ГИС"></iframe></div>
         </div>
       </div>
     </div>
@@ -399,16 +425,67 @@
   </div>
 </section>
 
-<section class="cta-section">
+<section class="form-section" id="zayavka">
   <div class="container reveal">
-    <div class="eyebrow" style="justify-content:center; color:#e9c98f;"><span data-ru="Запись" data-en="Booking" data-zh="预约" data-uz="Yozilish"></span></div>
-    <h2 data-ru="Выберите время онлайн — это займёт минуту" data-en="Pick your time online — it takes a minute" data-zh="在线选择时间——只需一分钟" data-uz="Vaqtni onlayn tanlang — bu bir daqiqa vaqt oladi"></h2>
-    <p data-ru="Свободные окна мастеров — сразу на экране, без звонков." data-en="See every free slot on screen, no phone calls needed." data-zh="所有空闲时段一目了然，无需打电话。" data-uz="Ustalarning bo‘sh vaqtlari — ekranda, qo‘ng‘iroqsiz."></p>
-    <div class="contact-row">
-      <a class="btn-solid dikidi-widget" href="https://dikidi.net/#widget=214399" data-ru="Записаться онлайн 24/7 · Dikidi" data-en="Book online 24/7 · Dikidi" data-zh="24小时在线预约 · Dikidi" data-uz="24/7 onlayn yozilish · Dikidi"></a>
-      <a class="btn-line" href="https://t.me/boscobeauty" target="_blank">Telegram — @boscobeauty</a>
-      <a class="btn-line" href="tel:+998951207020">+998 95 120 70 20</a>
+    <div class="eyebrow"><span data-ru="Заявка" data-uz="Ariza" data-en="Request" data-zh="预约申请"></span></div>
+    <h2 data-ru="Оставьте заявку — подберём время и мастера" data-uz="Ariza qoldiring — vaqt va ustani tanlaymiz" data-en="Leave a request and we will find your time and specialist" data-zh="留下申请——我们为您安排时间与技师"></h2>
+    <p class="lead" data-ru="Перезвоним, ответим на вопросы и подтвердим запись." data-uz="Qo‘ng‘iroq qilamiz, savollarga javob beramiz va yozuvni tasdiqlaymiz." data-en="We will call you back, answer your questions and confirm the appointment." data-zh="我们会回电、解答疑问并确认预约。"></p>
+
+    <div class="form-card">
+      <form name="zayavka-manicure" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="leadForm">
+        <input type="hidden" name="form-name" value="zayavka-manicure">
+        <input type="hidden" name="page" id="fPage" value="">
+        <p class="hp"><label>Do not fill this out: <input name="bot-field"></label></p>
+
+        <div class="form-row">
+          <label for="fName" data-ru="Ваше имя" data-uz="Ismingiz" data-en="Your name" data-zh="您的姓名"></label>
+          <input type="text" id="fName" name="name" required autocomplete="name"
+                 data-ph-ru="Например, Мадина" data-ph-uz="Masalan, Madina" data-ph-en="For example, Madina" data-ph-zh="例如：Madina">
+        </div>
+
+        <div class="form-row">
+          <label for="fPhone" data-ru="Телефон" data-uz="Telefon" data-en="Phone" data-zh="电话"></label>
+          <input type="tel" id="fPhone" name="phone" required autocomplete="tel"
+                 data-ph-ru="+998 __ ___ __ __" data-ph-uz="+998 __ ___ __ __" data-ph-en="+998 __ ___ __ __" data-ph-zh="+998 __ ___ __ __">
+        </div>
+
+        <div class="form-row">
+          <label for="fService" data-ru="Услуга" data-uz="Xizmat" data-en="Service" data-zh="服务项目"></label>
+          <select id="fService" name="service" required>
+            <option value="Маникюр с покрытием и укреплением" data-ru="Маникюр с покрытием и укреплением" data-uz="Qoplama bilan manikyur" data-en="Manicure with gel polish" data-zh="美甲（含甲油胶）"></option>
+            <option value="Женский маникюр без покрытия" data-ru="Женский маникюр без покрытия" data-uz="Qoplamasiz ayollar manikyuri" data-en="Women's manicure, no polish" data-zh="女士美甲（不上色）"></option>
+            <option value="Мужской маникюр" data-ru="Мужской маникюр" data-uz="Erkaklar manikyuri" data-en="Men's manicure" data-zh="男士美甲"></option>
+            <option value="Педикюр" data-ru="Педикюр" data-uz="Pedikyur" data-en="Pedicure" data-zh="美足"></option>
+            <option value="Наращивание ногтей" data-ru="Наращивание ногтей" data-uz="Tirnoq uzaytirish" data-en="Nail extensions" data-zh="延长甲"></option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="fTime" data-ru="Удобное время (необязательно)" data-uz="Qulay vaqt (ixtiyoriy)" data-en="Preferred time (optional)" data-zh="方便的时间（选填）"></label>
+          <input type="text" id="fTime" name="time"
+                 data-ph-ru="Например, суббота после 15:00" data-ph-uz="Masalan, shanba 15:00 dan keyin" data-ph-en="For example, Saturday after 3 pm" data-ph-zh="例如：周六下午3点后">
+        </div>
+
+        <button type="submit" class="form-submit" id="fSubmit"
+                data-ru="Отправить заявку" data-uz="Arizani yuborish" data-en="Send request" data-zh="提交申请"></button>
+
+        <p class="form-note">
+          <span data-ru="Нажимая кнопку, вы соглашаетесь с" data-uz="Tugmani bosish orqali siz quyidagiga rozilik bildirasiz:" data-en="By sending this form you agree to our" data-zh="点击提交即表示您同意我们的"></span>
+          <a href="privacy.html" data-ru="политикой конфиденциальности" data-uz="maxfiylik siyosati" data-en="privacy policy" data-zh="隐私政策"></a>
+        </p>
+        <p class="form-err" id="fErr" data-ru="Не удалось отправить. Напишите нам в Telegram — ответим сразу." data-uz="Yuborib bo‘lmadi. Telegram orqali yozing — darhol javob beramiz." data-en="Could not send. Message us on Telegram and we will reply right away." data-zh="提交失败。请通过 Telegram 联系我们，我们会立即回复。"></p>
+      </form>
+
+      <div class="form-ok" id="fOk">
+        <b data-ru="Спасибо, заявка принята" data-uz="Rahmat, ariza qabul qilindi" data-en="Thank you, we have your request" data-zh="感谢您，已收到申请"></b>
+        <span data-ru="Администратор свяжется с вами в ближайшее время." data-uz="Administrator siz bilan tez orada bog‘lanadi." data-en="Our front desk will contact you shortly." data-zh="我们的前台会尽快与您联系。"></span>
+      </div>
     </div>
+
+    <p class="form-alt">
+      <span data-ru="Не хотите ждать звонка?" data-uz="Qo‘ng‘iroqni kutishni xohlamaysizmi?" data-en="Prefer not to wait for a call?" data-zh="不想等待回电？"></span>
+      <a class="dikidi-widget" href="https://dikidi.net/#widget=214399" data-ru="Выбрать время самому онлайн 24/7" data-uz="Vaqtni o‘zingiz onlayn tanlang 24/7" data-en="Pick your own time online 24/7" data-zh="自行在线选择时间（24小时）"></a>
+    </p>
   </div>
 </section>
 
@@ -443,6 +520,9 @@
     translatable.forEach(el => {
       const val = el.getAttribute('data-' + lang) || el.getAttribute('data-ru');
       if (val !== null) el.innerHTML = val;
+    });
+    document.querySelectorAll('[data-ph-ru]').forEach(el => {
+      el.placeholder = el.getAttribute('data-ph-' + lang) || el.getAttribute('data-ph-ru');
     });
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
     langBtns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
@@ -482,6 +562,39 @@
   document.querySelectorAll('.dikidi-widget').forEach(el => el.addEventListener('click', () => trackConversion('booking_click')));
   document.querySelectorAll('a[href^="https://t.me/"]').forEach(el => el.addEventListener('click', () => trackConversion('telegram_click')));
   document.querySelectorAll('a[href^="tel:"]').forEach(el => el.addEventListener('click', () => trackConversion('phone_click')));
+
+  // ---- lead form: submit to Netlify Forms, then fire the ad conversion ----
+  (function(){
+    const form = document.getElementById('leadForm');
+    if (!form) return;
+    const pageField = document.getElementById('fPage');
+    if (pageField) pageField.value = location.pathname;
+    const okBox = document.getElementById('fOk');
+    const errBox = document.getElementById('fErr');
+    const btn = document.getElementById('fSubmit');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errBox.style.display = 'none';
+      btn.disabled = true;
+      try {
+        const body = new URLSearchParams(new FormData(form)).toString();
+        const res = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body
+        });
+        if (!res.ok) throw new Error('bad response');
+        form.style.display = 'none';
+        okBox.style.display = 'block';
+        trackConversion('form_submit');   // <- this is the real conversion for Google Ads / Yandex Direct
+      } catch (err) {
+        errBox.style.display = 'block';
+        btn.disabled = false;
+      }
+    });
+  })();
+
 
 </script>
 
