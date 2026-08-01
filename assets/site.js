@@ -84,6 +84,29 @@ document.querySelectorAll('.dikidi-widget').forEach(el => el.addEventListener('c
 document.querySelectorAll('a[href^="https://t.me/"]').forEach(el => el.addEventListener('click', () => trackConversion('telegram_click')));
 document.querySelectorAll('a[href^="tel:"]').forEach(el => el.addEventListener('click', () => trackConversion('phone_click')));
 
+// ---- Google Ads conversion tracking: phone & Telegram clicks (delegated, all pages) ----
+document.addEventListener('click', (e) => {
+  if (e.target.closest('a[href^="tel:"]')) {
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18362385957/o7mkCOH9tNocEKWM77NE',
+        'value': 1.0,
+        'currency': 'UZS'
+      });
+    }
+    return;
+  }
+  if (e.target.closest('a[href^="https://t.me/"]')) {
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18362385957/73aeCNb9rNocEKWM77NE',
+        'value': 1.0,
+        'currency': 'UZS'
+      });
+    }
+  }
+});
+
 // ---- lead form: submit to Netlify Forms, then fire the ad conversion ----
 (function(){
   const form = document.getElementById('leadForm');
