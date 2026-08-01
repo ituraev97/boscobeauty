@@ -108,6 +108,13 @@ document.querySelectorAll('a[href^="tel:"]').forEach(el => el.addEventListener('
       if (!res.ok) throw new Error('bad response');
       form.style.display = 'none';
       okBox.style.display = 'block';
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18362385957/whGvCNKls9ocEKWM77NE',
+          'value': 1.0,
+          'currency': 'UZS'
+        });
+      }
       trackConversion('form_submit');
     } catch (err) {
       errBox.style.display = 'block';
