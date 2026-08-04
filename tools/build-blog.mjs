@@ -123,6 +123,23 @@ function loadPosts() {
     if (desc !== post.description) {
       fail(`${at}: meta description в ${file} не совпадает с posts.json\n    в файле:     «${desc}»\n    в posts.json: «${post.description}»`);
     }
+
+    // canonical в blog/_template.html намеренно отсутствует, чтобы шаблон не тянул
+    // за собой ссылку на несуществующий URL. Здесь ловим статью, где его забыли добавить.
+    const canonical = /<link rel="canonical" href="([^"]*)">/.exec(html)?.[1];
+    const wantCanonical = `${SITE}/blog/${slug}`;
+    if (!canonical) {
+      fail(`${at}: в ${file} нет <link rel="canonical">. Добавь после meta description:\n    <link rel="canonical" href="${wantCanonical}">`);
+    }
+    if (canonical !== wantCanonical) {
+      fail(`${at}: canonical в ${file} — «${canonical}», ожидается «${wantCanonical}» (без .html: на Netlify включены Pretty URLs)`);
+    }
+
+    // шаблон отдаётся с noindex; если его забыли снять, статья не попадёт в индекс
+    const robots = /<meta name="robots" content="([^"]*)">/.exec(html)?.[1] ?? '';
+    if (/noindex/i.test(robots)) {
+      fail(`${at}: в ${file} стоит <meta name="robots" content="${robots}"> — осталось от шаблона. Замени на "index, follow"`);
+    }
   }
 
   // свежие сверху; при равных датах — по слагу, чтобы порядок был воспроизводимым
