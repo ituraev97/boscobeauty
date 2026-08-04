@@ -10,12 +10,28 @@
     <loc>https://boscobeauty.uz/blog/</loc>
     <lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://boscobeauty.uz/blog/"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://boscobeauty.uz/blog/uz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boscobeauty.uz/blog/"/>
+  </url>
+  <url>
+    <loc>https://boscobeauty.uz/blog/uz/</loc>
+    <lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boscobeauty.uz/blog/"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://boscobeauty.uz/blog/uz/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://boscobeauty.uz/blog/"/>
   </url>
   <url>
     <loc>https://boscobeauty.uz/blog/botoks-keratin-nanoplastika-volos</loc>
     <lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://boscobeauty.uz/blog/botoks-keratin-nanoplastika-volos"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://boscobeauty.uz/blog/uz/botoks-keratin-nanoplastika-volos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boscobeauty.uz/blog/botoks-keratin-nanoplastika-volos"/>
+  </url>
+  <url>
+    <loc>https://boscobeauty.uz/blog/uz/botoks-keratin-nanoplastika-volos</loc>
+    <lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boscobeauty.uz/blog/botoks-keratin-nanoplastika-volos"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://boscobeauty.uz/blog/uz/botoks-keratin-nanoplastika-volos"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://boscobeauty.uz/blog/botoks-keratin-nanoplastika-volos"/>
   </url>
   <url>
@@ -34,6 +50,14 @@
     <loc>https://boscobeauty.uz/blog/manikyur-tashkent-ceny</loc>
     <lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://boscobeauty.uz/blog/manikyur-tashkent-ceny"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://boscobeauty.uz/blog/uz/manikyur-tashkent-ceny"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://boscobeauty.uz/blog/manikyur-tashkent-ceny"/>
+  </url>
+  <url>
+    <loc>https://boscobeauty.uz/blog/uz/manikyur-tashkent-ceny</loc>
+    <lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boscobeauty.uz/blog/manikyur-tashkent-ceny"/>
+    <xhtml:link rel="alternate" hreflang="uz" href="https://boscobeauty.uz/blog/uz/manikyur-tashkent-ceny"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://boscobeauty.uz/blog/manikyur-tashkent-ceny"/>
   </url>
   <url>
@@ -61,6 +85,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://boscobeauty.uz/blog/uhod-za-volosami-v-tashkente"/>
   </url>
   <url><loc>https://boscobeauty.uz/blog/rss.xml</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://boscobeauty.uz/blog/uz/rss.xml</loc><lastmod>2026-08-04</lastmod><changefreq>weekly</changefreq><priority>0.3</priority></url>
   <!-- BLOG:END -->
   <url><loc>https://boscobeauty.uz/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://boscobeauty.uz/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
