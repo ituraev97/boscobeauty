@@ -1,34 +1,17 @@
 <!DOCTYPE html>
 <!--
-  Шаблон новой статьи блога. В выдачу не попадает: закрыт в robots.txt и не входит в sitemap.
-  Порядок работы — см. CLAUDE.md в корне репозитория.
+  Шаблон статьи блога. Используется скриптом tools/new-article.mjs, вручную не копируется.
+  Сам файл в выдачу не попадает: robots=noindex и Disallow в robots.txt.
 
-  Плейсхолдеры:
-    {{SLUG}}         — латиницей через дефис, совпадает с именем файла и slug в posts.json
-    {{TITLE}}        — содержимое <title>, не длиннее 60 символов, дословно как в posts.json
-    {{DESCRIPTION}}  — meta description, 140–160 символов, дословно как в posts.json
-    {{H1}}           — заголовок статьи, ровно один <h1> на страницу
-    {{DATE}}         — дата публикации, ГГГГ-ММ-ДД
-    {{DATE_RU}}      — та же дата прописью, например: 4 августа 2026
-    {{UPDATED}}      — дата последнего изменения, ГГГГ-ММ-ДД
-    {{READING}}      — время чтения в минутах, число
-    {{CATEGORY}}     — одна из: Ногти · Волосы · Брови и ресницы · Подология · Полезное
-    {{CRUMB}}        — короткое название статьи в хлебных крошках
-    {{OG_IMAGE}}     — путь от корня, по умолчанию /og-image.jpg
+  Порядок добавления языковой версии — см. CLAUDE.md. Коротко:
+    1. дописать languages.<lang> в blog/posts.json
+    2. написать тело статьи в отдельный файл: от <header class="blog-hero"> до </article>
+    3. node tools/new-article.mjs <lang> <slug> <файл-с-телом>
+    4. node tools/build-blog.mjs
 
-  Сам шаблон закрыт от индексации: robots=noindex и Disallow в robots.txt.
-  В новой статье обязательно замени noindex на index, follow и добавь строку
-    <link rel="canonical" href="https://boscobeauty.uz/blog/{{SLUG}}">
-  сразу после meta description. Если забыть — tools/build-blog.mjs упадёт с ошибкой.
-    {{OG_TITLE}}     — заголовок для соцсетей
-    {{OG_DESCRIPTION}} — описание для соцсетей, 1 строка
-    {{LEDE}}         — лид-абзац, 2–3 предложения, главный ключ в первых 100 словах
-    {{TOC}}          — пункты оглавления: <li><a href="#anchor">Заголовок H2</a></li>
-    {{BODY}}         — тело статьи: h2/h3, абзацы, списки, при необходимости таблица
-    {{FAQ_HTML}}     — блоки <details> с вопросами и ответами
-    {{FAQ_JSONLD}}   — те же вопросы и ответы в FAQPage, текст обязан совпадать дословно
+  Плейсхолдеры подставляет скаффолдер, руками их трогать не нужно.
 -->
-<html lang="ru">
+<html lang="{{LANG}}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,13 +46,16 @@
 <meta name="description" content="{{DESCRIPTION}}">
 <meta name="robots" content="noindex, nofollow">
 <meta name="author" content="BOSCO Beauty Club">
-<link rel="alternate" type="application/rss+xml" title="Блог BOSCO Beauty Club" href="https://boscobeauty.uz/blog/rss.xml">
+<link rel="canonical" href="{{CANONICAL}}">
+<!-- HREFLANG:START -->
+<!-- HREFLANG:END -->
+<link rel="alternate" type="application/rss+xml" title="{{RSS_TITLE}}" href="{{RSS_URL}}">
 
 <meta property="og:type" content="article">
 <meta property="og:title" content="{{OG_TITLE}}">
 <meta property="og:description" content="{{OG_DESCRIPTION}}">
-<meta property="og:url" content="https://boscobeauty.uz/blog/{{SLUG}}">
-<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="{{CANONICAL}}">
+<meta property="og:locale" content="{{OG_LOCALE}}">
 <meta property="og:site_name" content="BOSCO Beauty Club">
 <meta property="og:image" content="https://boscobeauty.uz{{OG_IMAGE}}">
 <meta property="og:image:width" content="1200">
@@ -87,7 +73,7 @@
   "description": "{{OG_DESCRIPTION}}",
   "datePublished": "{{DATE}}",
   "dateModified": "{{UPDATED}}",
-  "inLanguage": "ru-RU",
+  "inLanguage": "{{IN_LANGUAGE}}",
   "image": "https://boscobeauty.uz{{OG_IMAGE}}",
   "author": {"@type": "Organization", "name": "BOSCO Beauty Club", "url": "https://boscobeauty.uz/"},
   "publisher": {
@@ -95,7 +81,7 @@
     "name": "BOSCO Beauty Club",
     "logo": {"@type": "ImageObject", "url": "https://boscobeauty.uz/web-app-manifest-512x512.png"}
   },
-  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://boscobeauty.uz/blog/{{SLUG}}"}
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "{{CANONICAL}}"}
 }
 </script>
 <script type="application/ld+json">
@@ -103,9 +89,9 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://boscobeauty.uz/"},
-    {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://boscobeauty.uz/blog/"},
-    {"@type": "ListItem", "position": 3, "name": "{{CRUMB}}", "item": "https://boscobeauty.uz/blog/{{SLUG}}"}
+    {"@type": "ListItem", "position": 1, "name": "{{HOME_LABEL}}", "item": "https://boscobeauty.uz/"},
+    {"@type": "ListItem", "position": 2, "name": "{{BLOG_LABEL}}", "item": "{{BLOG_URL}}"},
+    {"@type": "ListItem", "position": 3, "name": "{{CRUMB}}", "item": "{{CANONICAL}}"}
   ]
 }
 </script>
@@ -137,71 +123,15 @@
     <a class="nl" href="/index.html#reviews" data-ru="Отзывы" data-en="Reviews" data-zh="顾客评价" data-uz="Sharhlar">Отзывы</a>
     <a class="nl" href="/index.html#location" data-ru="Контакты" data-en="Contact" data-zh="联系我们" data-uz="Aloqa">Контакты</a>
     <div class="lang-toggle">
-      <button class="lang-btn active" data-lang="ru">RU</button>
-      <button class="lang-btn" data-lang="uz">UZ</button>
-      <button class="lang-btn" data-lang="en">EN</button>
-      <button class="lang-btn" data-lang="zh">中文</button>
+      <!-- LANGNAV:START -->
+      <!-- LANGNAV:END -->
     </div>
     <a class="cta-tg dikidi-widget" href="https://dikidi.net/#widget=214399" data-ru="Записаться 24/7" data-en="Book 24/7" data-zh="24小时预约" data-uz="24/7 onlayn yozilish">Записаться 24/7</a>
   </div>
   <button class="burger" id="burger">☰</button>
 </nav>
 
-<!-- TODO: UZ/EN версия статьи -->
-<header class="blog-hero">
-  <div class="blog-wrap">
-    <!-- именно div, а не nav: в assets/styles.css селектор nav{} написан по элементу -->
-    <div class="crumbs" role="navigation" aria-label="Хлебные крошки">
-      <a href="/index.html">Главная</a><i>/</i><a href="/blog/">Блог</a><i>/</i><span>{{CRUMB}}</span>
-    </div>
-    <h1>{{H1}}</h1>
-    <div class="post-meta">{{DATE_RU}}<i>·</i>Чтение ~{{READING}} мин<i>·</i>{{CATEGORY}}</div>
-  </div>
-</header>
-
-<main class="blog-wrap post">
-  <article>
-    <p class="lede-p">{{LEDE}}</p>
-
-    <div class="toc" role="navigation" aria-label="Содержание">
-      <b>Содержание</b>
-      <ol>
-{{TOC}}
-        <li><a href="#faq">Частые вопросы</a></li>
-      </ol>
-    </div>
-
 {{BODY}}
-
-    <section class="faq" id="faq" aria-label="Частые вопросы">
-      <h2>Частые вопросы</h2>
-
-{{FAQ_HTML}}
-    </section>
-
-    <section class="cta-card">
-      <h2>Записаться в BOSCO</h2>
-      <p>Ташкент, ул. Эльбека, 15 — ногти, брови и ресницы, волосы и подология для неё и для него.</p>
-      <ul class="cta-facts">
-        <li>Адрес: Ташкент, ул. Эльбека, 15 (Яшнабадский район)</li>
-        <li>Часы работы: ежедневно, 10:00–20:00</li>
-        <li>Телефон: <a href="tel:+998951207020">+998 95 120 70 20</a></li>
-      </ul>
-      <div class="cta-btns">
-        <a class="btn-solid" href="https://t.me/boscobeauty" target="_blank" rel="noopener">Написать в Telegram</a>
-        <a class="btn-line dikidi-widget" href="https://dikidi.net/#widget=214399">Записаться онлайн 24/7</a>
-      </div>
-    </section>
-
-    <section class="related">
-      <h2>Читайте также</h2>
-      <div class="rel-grid">
-        <!-- RELATED:START -->
-        <!-- Содержимое пересобирает tools/build-blog.mjs — вручную не редактировать -->
-        <!-- RELATED:END -->
-      </div>
-    </section>
-  </article>
 </main>
 
 <footer>

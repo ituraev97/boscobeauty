@@ -23,20 +23,24 @@
         "published": true
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Keratin, hair botox or nanoplasty: which to choose",
+        "cardTitle": "Keratin, hair botox or nanoplasty: what the difference is and which one you want",
+        "description": "How keratin treatment differs from hair botox and nanoplasty, which one suits which hair, how long each lasts and what the aftercare demands. From BOSCO.",
+        "excerpt": "A comparison table on effect, duration and aftercare — and which treatment actually fits your hair.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Keratin and hair botox",
+        "ogDescription": "How keratin treatment, hair botox and nanoplasty differ and which one suits your hair."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "角蛋白护理与头发 Botox：区别与选择",
+        "cardTitle": "角蛋白护理、头发 Botox 还是纳米塑形：区别在哪，该选哪一种",
+        "description": "头发 Botox 与角蛋白护理、纳米塑形究竟差在哪里，哪一种适合什么样的头发，效果能维持多久，做完之后又需要怎样护理。来自 BOSCO 美容师。",
+        "excerpt": "效果、时长与后续护理的对比表——以及同一段头发究竟适合哪一种。",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "角蛋白与头发 Botox",
+        "ogDescription": "角蛋白护理、头发 Botox 与纳米塑形的区别，以及哪一种适合你的头发。"
       }
     }
   },
@@ -56,28 +60,34 @@
         "published": true
       },
       "uz": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Toshkentda go'zallik saloni tanlash: 9 ta belgi | BOSCO",
+        "cardTitle": "Toshkentda go'zallik saloni qanday tanlanadi: yaxshi ustaga tushganingizni bildiradigan 9 belgi",
+        "description": "Instrumentlar sterilizatsiyasi, sharhlar, ochiq narxlar va ustaning ishlari — Toshkentda go'zallik saloni tanlashda nimaga qarash va nima ogohlantirishi kerak.",
+        "excerpt": "Interyer va rasmlar emas: birinchi tashrifdayoq ko'rinadigan to'qqizta belgi va ogohlantiruvchi nuqtalar.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Go'zallik saloni tanlash",
+        "ogDescription": "Toshkentda go'zallik saloni tanlashda nimaga qarash kerak va qaysi belgilar ogohlantiradi."
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Choosing a beauty salon in Tashkent: nine signs",
+        "cardTitle": "How to choose a beauty salon in Tashkent: nine signs you are in good hands",
+        "description": "Tool sterilisation, reviews, transparent prices and the technician's portfolio — what to look for when choosing a beauty salon in Tashkent, and the red flags.",
+        "excerpt": "Not the interior: nine things visible on a first visit, and the red flags worth walking away from.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Choosing a salon",
+        "ogDescription": "What to look for when choosing a beauty salon in Tashkent, and which red flags matter."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "在塔什干怎么挑美容院：九个信号",
+        "cardTitle": "在塔什干怎么挑美容院：说明你找对了人的九个信号",
+        "description": "器械消毒、评价怎么读、价格是否透明、该看谁的作品——在塔什干挑美容院时具体该看哪几件事，以及哪些信号一出现就应该换一家。BOSCO 为你说明。",
+        "excerpt": "不是看装修：第一次进店就能看到的九件事，以及值得转身走开的警示信号。",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "如何挑选美容院",
+        "ogDescription": "在塔什干挑美容院该看什么，以及哪些信号需要警惕。"
       }
     }
   },
@@ -97,28 +107,34 @@
         "published": true
       },
       "uz": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Kiprik va qosh laminatsiyasi: qancha saqlanadi | BOSCO",
+        "cardTitle": "Kiprik va qosh laminatsiyasi: qanday o'tadi, kimga mos keladi va qancha saqlanadi",
+        "description": "Kiprik va qosh laminatsiyasi qanday o'tadi, kiprik ekishdan nimasi bilan farq qiladi, natija qancha saqlanadi va muolajadan keyin qanday parvarish kerak.",
+        "excerpt": "O'z tolangiz bilan ishlash: natija 4–6 hafta, kundalik parvarish deyarli talab qilinmaydi.",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "Kiprik va qosh laminatsiyasi",
+        "ogDescription": "Laminatsiya qanday o'tadi, kiprik ekishdan farqi va natija qancha saqlanadi."
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Lash and brow lamination: how long it lasts",
+        "cardTitle": "Lash and brow lamination: how it works, who it suits and how long it lasts",
+        "description": "How lash and brow lamination works, how it differs from extensions, how long the result lasts and what the aftercare involves. From BOSCO in Tashkent.",
+        "excerpt": "Your own hairs, nothing glued on: how the appointment goes and why the result holds four to six weeks.",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "Lash and brow lamination",
+        "ogDescription": "How lash and brow lamination works, how it differs from extensions and how long it lasts."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "睫毛与眉毛塑形：能维持多久",
+        "cardTitle": "睫毛与眉毛塑形：怎么做、适合谁、能维持多久",
+        "description": "睫毛塑形和眉毛塑形具体是怎么做的，和嫁接睫毛的区别究竟在哪里，效果能维持多久，以及做完之后的头一天需要注意些什么。来自 BOSCO 塔什干。",
+        "excerpt": "用的是你自己的毛发，不粘不加：流程如何、为什么效果能维持四到六周。",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "睫毛与眉毛塑形",
+        "ogDescription": "睫毛与眉毛塑形怎么做、和嫁接的区别，以及能维持多久。"
       }
     }
   },
@@ -143,23 +159,29 @@
         "description": "Manikyur qanday turlarga bo'linadi, apparatli va kombinatsiyalangan usul nimasi bilan farq qiladi, Toshkentda narxi qancha va ustani qanday tanlash kerak.",
         "excerpt": "Apparatli va kombinatsiyalangan usul, shahar bo'yicha o'rtacha narxlar va usta xavfsiz ishlayotganini bilish belgilari.",
         "readingMinutes": 6,
-        "published": true
+        "published": true,
+        "crumb": "Toshkentda manikyur",
+        "ogDescription": "Manikyur turlari, Toshkentdagi narxlar va usta tanlash bo'yicha BOSCO ustalari maslahati."
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Manicure in Tashkent: types, prices, choosing a salon",
+        "cardTitle": "Manicure in Tashkent: the types, what it costs and how to pick a technician",
+        "description": "The types of manicure, what one costs in Tashkent in soum and dollars, how long gel polish lasts and how to tell your technician works safely. From BOSCO.",
+        "excerpt": "City-average prices in soum and dollars, the difference between e-file and combined, and what to check in the first fifteen minutes.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Manicure in Tashkent",
+        "ogDescription": "What a manicure costs in Tashkent, the types on offer and how to pick a technician."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "塔什干美甲：种类、价格与如何挑选美甲师",
+        "cardTitle": "塔什干美甲：有哪些种类、价格如何、怎样挑选美甲师",
+        "description": "美甲有哪几种做法，在塔什干做一次要多少钱（苏姆与人民币对照），甲油胶能保持多久，以及怎样在坐下后的前十五分钟判断美甲师的操作是否安全。BOSCO 出品。",
+        "excerpt": "苏姆与人民币对照的全城均价、机打与混合做法的区别，以及前十五分钟要看的几个信号。",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "塔什干美甲",
+        "ogDescription": "塔什干美甲的种类、价格与挑选美甲师的方法。"
       }
     }
   },
@@ -179,28 +201,34 @@
         "published": true
       },
       "uz": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Erkaklar manikyuri: nimalardan iborat va narxi | BOSCO",
+        "cardTitle": "Erkaklar manikyuri: nimalardan iborat, nima uchun kerak va Toshkentda narxi qancha",
+        "description": "Erkaklar manikyuri nima, ayollarnikidan nimasi bilan farq qiladi, qancha vaqt oladi va Toshkentda narxi qancha. Laksiz va noqulaylik yo'q — BOSCO tushuntiradi.",
+        "excerpt": "Laksiz va bezaksiz: muolaja qanday o'tadi, qancha vaqt oladi va birinchi marta nimani kutish kerak.",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "Erkaklar manikyuri",
+        "ogDescription": "Erkaklar manikyuri nimalardan iborat, qancha vaqt oladi va Toshkentda narxi qancha."
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Men's manicure: what it involves and what it costs",
+        "cardTitle": "Men's manicure: what it involves, why bother and what it costs in Tashkent",
+        "description": "What a men's manicure involves, how it differs from a women's, how long it takes and what it costs in Tashkent. No polish and no awkwardness, from BOSCO.",
+        "excerpt": "No polish, no decoration: how the appointment goes, what it costs and what to expect the first time.",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "Men's manicure",
+        "ogDescription": "What a men's manicure involves, how long it takes and what it costs in Tashkent."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "男士美甲：包含什么、多少钱",
+        "cardTitle": "男士美甲：包含哪些内容、为什么值得做、在塔什干多少钱",
+        "description": "男士美甲到底做些什么，和女士美甲的区别在哪，需要多长时间，在塔什干价格是多少（苏姆与人民币对照）。不上色、也不必觉得别扭，BOSCO 为你说明。",
+        "excerpt": "不上色、不做装饰：流程如何、价格多少，以及第一次去可以预期什么。",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "男士美甲",
+        "ogDescription": "男士美甲包含哪些内容、需要多久、在塔什干多少钱。"
       }
     }
   },
@@ -220,28 +248,34 @@
         "published": true
       },
       "uz": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Podolog yoki pedikyur: qachon mutaxassis kerak | BOSCO",
+        "cardTitle": "Podolog yoki pedikyur: farqi nimada va qachon mutaxassis kerak bo'ladi",
+        "description": "O'sib chiqayotgan tirnoq, tovon yoriqlari, qadoq va zamburug' — qachon oddiy pedikyur yetarli bo'lmaydi va podolog kerak bo'ladi. Farqini tushuntiramiz.",
+        "excerpt": "Pedikyur oyoq ko'rinishi haqida, podologiya esa uning holati haqida. Chegara qayerdan o'tishini ko'rib chiqamiz.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Podolog yoki pedikyur",
+        "ogDescription": "Qachon oddiy pedikyur yetarli bo'lmaydi va podolog kerak bo'ladi."
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Podiatry or pedicure: when you need a specialist",
+        "cardTitle": "Podiatry or pedicure: what the difference is and when you need a specialist",
+        "description": "Ingrown nails, heel fissures, calluses and fungus — when an ordinary pedicure is not enough and you need a foot care specialist. Explained by BOSCO, Tashkent.",
+        "excerpt": "A pedicure is about how feet look, podiatry about how they work. Where the line falls, and when to see a doctor.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Podiatry or pedicure",
+        "ogDescription": "When an ordinary pedicure is not enough and a foot care specialist is needed."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "专业足部护理还是普通修脚：怎么选",
+        "cardTitle": "专业足部护理与普通修脚：区别在哪，什么时候需要专业人员",
+        "description": "嵌甲、脚跟皲裂、鸡眼和灰指甲——什么时候普通修脚已经不够、需要专业足部护理，以及哪些情况必须先去看医生。BOSCO 塔什干为你说明界线在哪。",
+        "excerpt": "修脚关心脚好不好看，足部护理关心它的状态。界线在哪，什么时候该去看医生。",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "足部护理还是修脚",
+        "ogDescription": "什么时候普通修脚已经不够，需要专业足部护理。"
       }
     }
   },
@@ -269,20 +303,24 @@
         "published": false
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Nail trends 2026: colours, shapes and designs",
+        "cardTitle": "Nail trends 2026: the colours, shapes and designs worth asking for",
+        "description": "The nail trends of 2026 — milky and pale blue shades, red, soft square and almond, chrome and pearl. Which of it suits your hands, explained by BOSCO.",
+        "excerpt": "Restraint over complexity: the colours holding all year, the two dominant shapes and what works on short nails.",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "Nail trends 2026",
+        "ogDescription": "The colours, shapes and designs of 2026, and how to work out which suit your hands."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "2026 美甲趋势：颜色、形状与款式",
+        "cardTitle": "2026 美甲趋势：值得开口要的颜色、形状与款式",
+        "description": "2026 年的美甲趋势——奶白与浅蓝、全年不下场的红色、软方形与杏仁形、镜面与珍珠细节。哪一种真正适合你的手，由 BOSCO 的美甲师说明。",
+        "excerpt": "克制胜过复杂：全年不下场的颜色、两种主导形状，以及短指甲适合什么。",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "2026 美甲趋势",
+        "ogDescription": "2026 的颜色、形状与款式，以及怎么判断哪一种适合你的手。"
       }
     }
   },
@@ -302,28 +340,34 @@
         "published": true
       },
       "uz": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Toshkentda soch parvarishi: qattiq suv va jazirama | BOSCO",
+        "cardTitle": "Toshkentda soch parvarishi: qattiq suv, jazirama va quruq havo bilan qanday kurashish kerak",
+        "description": "Toshkentda soch nega tez xiralashadi va chigallashadi, qattiq suv bilan jazirama nima qiladi va qanday parvarish haqiqatan yordam beradi. BOSCO maslahati.",
+        "excerpt": "Qattiq suv, yozgi jazirama va isitish mavsumi — va ularning har biriga qarshi ishlaydigan oddiy odatlar.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Toshkentda soch parvarishi",
+        "ogDescription": "Qattiq suv, jazirama va quruq havo sochga nima qiladi va qanday parvarish yordam beradi."
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Hair care in Tashkent: hard water, sun and dry air",
+        "cardTitle": "Hair care in Tashkent: coping with hard water, sun and very dry air",
+        "description": "Why hair dulls and tangles faster in Tashkent, what hard water and summer sun do to it, and which parts of a routine genuinely help. Advice from BOSCO.",
+        "excerpt": "Hard water, a brutal summer sun and the heating season — and the simple habits that offset each of them.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Hair care in Tashkent",
+        "ogDescription": "What hard water, heat and dry air do to hair in Tashkent, and what actually helps."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "塔什干头发护理：硬水、烈日与干燥空气",
+        "cardTitle": "在塔什干护理头发：硬水、烈日和极干燥的空气怎么应对",
+        "description": "为什么头发在塔什干更快失去光泽、更容易打结，当地的硬水和夏季强日照究竟做了什么，冬天供暖季又该怎么办，以及哪些护理方式真正有效。来自 BOSCO 的建议。",
+        "excerpt": "硬水、夏季烈日与供暖季——以及分别能抵消它们的简单习惯。",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "塔什干头发护理",
+        "ogDescription": "硬水、高温与干燥空气对头发的影响，以及什么护理真正有效。"
       }
     }
   }
