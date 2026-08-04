@@ -97,12 +97,14 @@
         "published": true
       },
       "uz": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Kiprik va qosh laminatsiyasi: qancha saqlanadi | BOSCO",
+        "cardTitle": "Kiprik va qosh laminatsiyasi: qanday o'tadi, kimga mos keladi va qancha saqlanadi",
+        "description": "Kiprik va qosh laminatsiyasi qanday o'tadi, kiprik ekishdan nimasi bilan farq qiladi, natija qancha saqlanadi va muolajadan keyin qanday parvarish kerak.",
+        "excerpt": "O'z tolangiz bilan ishlash: natija 4–6 hafta, kundalik parvarish deyarli talab qilinmaydi.",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "Kiprik va qosh laminatsiyasi",
+        "ogDescription": "Laminatsiya qanday o'tadi, kiprik ekishdan farqi va natija qancha saqlanadi."
       },
       "en": {
         "title": "",
@@ -304,12 +306,14 @@
         "published": true
       },
       "uz": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Toshkentda soch parvarishi: qattiq suv va jazirama | BOSCO",
+        "cardTitle": "Toshkentda soch parvarishi: qattiq suv, jazirama va quruq havo bilan qanday kurashish kerak",
+        "description": "Toshkentda soch nega tez xiralashadi va chigallashadi, qattiq suv bilan jazirama nima qiladi va qanday parvarish haqiqatan yordam beradi. BOSCO maslahati.",
+        "excerpt": "Qattiq suv, yozgi jazirama va isitish mavsumi — va ularning har biriga qarshi ishlaydigan oddiy odatlar.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Toshkentda soch parvarishi",
+        "ogDescription": "Qattiq suv, jazirama va quruq havo sochga nima qiladi va qanday parvarish yordam beradi."
       },
       "en": {
         "title": "",
