@@ -68,12 +68,14 @@
         "ogDescription": "Toshkentda go'zallik saloni tanlashda nimaga qarash kerak va qaysi belgilar ogohlantiradi."
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Choosing a beauty salon in Tashkent: nine signs",
+        "cardTitle": "How to choose a beauty salon in Tashkent: nine signs you are in good hands",
+        "description": "Tool sterilisation, reviews, transparent prices and the technician's portfolio — what to look for when choosing a beauty salon in Tashkent, and the red flags.",
+        "excerpt": "Not the interior: nine things visible on a first visit, and the red flags worth walking away from.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Choosing a salon",
+        "ogDescription": "What to look for when choosing a beauty salon in Tashkent, and which red flags matter."
       },
       "zh": {
         "title": "",
@@ -289,12 +291,14 @@
         "published": false
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Nail trends 2026: colours, shapes and designs",
+        "cardTitle": "Nail trends 2026: the colours, shapes and designs worth asking for",
+        "description": "The nail trends of 2026 — milky and pale blue shades, red, soft square and almond, chrome and pearl. Which of it suits your hands, explained by BOSCO.",
+        "excerpt": "Restraint over complexity: the colours holding all year, the two dominant shapes and what works on short nails.",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "Nail trends 2026",
+        "ogDescription": "The colours, shapes and designs of 2026, and how to work out which suit your hands."
       },
       "zh": {
         "title": "",
