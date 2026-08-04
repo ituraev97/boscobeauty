@@ -33,12 +33,14 @@
         "ogDescription": "How keratin treatment, hair botox and nanoplasty differ and which one suits your hair."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "角蛋白护理与头发 Botox：区别与选择",
+        "cardTitle": "角蛋白护理、头发 Botox 还是纳米塑形：区别在哪，该选哪一种",
+        "description": "头发 Botox 与角蛋白护理、纳米塑形究竟差在哪里，哪一种适合什么样的头发，效果能维持多久，做完之后又需要怎样护理。来自 BOSCO 美容师。",
+        "excerpt": "效果、时长与后续护理的对比表——以及同一段头发究竟适合哪一种。",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "角蛋白与头发 Botox",
+        "ogDescription": "角蛋白护理、头发 Botox 与纳米塑形的区别，以及哪一种适合你的头发。"
       }
     }
   },
@@ -123,12 +125,14 @@
         "ogDescription": "How lash and brow lamination works, how it differs from extensions and how long it lasts."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "睫毛与眉毛塑形：能维持多久",
+        "cardTitle": "睫毛与眉毛塑形：怎么做、适合谁、能维持多久",
+        "description": "睫毛塑形和眉毛塑形具体是怎么做的，和嫁接睫毛的区别究竟在哪里，效果能维持多久，以及做完之后的头一天需要注意些什么。来自 BOSCO 塔什干。",
+        "excerpt": "用的是你自己的毛发，不粘不加：流程如何、为什么效果能维持四到六周。",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "睫毛与眉毛塑形",
+        "ogDescription": "睫毛与眉毛塑形怎么做、和嫁接的区别，以及能维持多久。"
       }
     }
   },
@@ -260,12 +264,14 @@
         "ogDescription": "When an ordinary pedicure is not enough and a foot care specialist is needed."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "专业足部护理还是普通修脚：怎么选",
+        "cardTitle": "专业足部护理与普通修脚：区别在哪，什么时候需要专业人员",
+        "description": "嵌甲、脚跟皲裂、鸡眼和灰指甲——什么时候普通修脚已经不够、需要专业足部护理，以及哪些情况必须先去看医生。BOSCO 塔什干为你说明界线在哪。",
+        "excerpt": "修脚关心脚好不好看，足部护理关心它的状态。界线在哪，什么时候该去看医生。",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "足部护理还是修脚",
+        "ogDescription": "什么时候普通修脚已经不够，需要专业足部护理。"
       }
     }
   },
