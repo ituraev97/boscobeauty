@@ -13,11 +13,14 @@ const SITE = 'https://boscobeauty.uz';
 const PER_PAGE = 12;
 
 // Русский — основной язык, лежит в /blog/. Остальные — в подкаталогах.
+// titleMax и descRange заданы на язык: в поисковой выдаче ограничение по ширине,
+// а иероглиф занимает примерно вдвое больше места, чем латинская буква. Держать
+// китайское описание в 140–160 знаках бессмысленно — оно всё равно обрежется.
 const LANGS = [
-  { code: 'ru', dir: '',    htmlLang: 'ru',    locale: 'ru_RU' },
-  { code: 'uz', dir: 'uz/', htmlLang: 'uz',    locale: 'uz_UZ' },
-  { code: 'en', dir: 'en/', htmlLang: 'en',    locale: 'en_US' },
-  { code: 'zh', dir: 'zh/', htmlLang: 'zh-CN', locale: 'zh_CN' },
+  { code: 'ru', dir: '',    htmlLang: 'ru',    locale: 'ru_RU', titleMax: 60, descRange: [140, 160] },
+  { code: 'uz', dir: 'uz/', htmlLang: 'uz',    locale: 'uz_UZ', titleMax: 60, descRange: [140, 160] },
+  { code: 'en', dir: 'en/', htmlLang: 'en',    locale: 'en_US', titleMax: 60, descRange: [140, 160] },
+  { code: 'zh', dir: 'zh/', htmlLang: 'zh-CN', locale: 'zh_CN', titleMax: 30, descRange: [70, 90] },
 ];
 const BASE = LANGS[0];
 const byCode = (c) => LANGS.find((l) => l.code === c);
@@ -148,11 +151,12 @@ function loadPosts() {
           fail(`${at} [${lang.code}]: поле "${field}" отсутствует или пустое, а published: true`);
         }
       }
-      if (L.title.length > 60) {
-        fail(`${at} [${lang.code}]: title длиннее 60 символов (${L.title.length}) — «${L.title}»`);
+      if (L.title.length > lang.titleMax) {
+        fail(`${at} [${lang.code}]: title длиннее ${lang.titleMax} символов (${L.title.length}) — «${L.title}»`);
       }
-      if (L.description.length < 140 || L.description.length > 160) {
-        fail(`${at} [${lang.code}]: description должен быть 140–160 символов, сейчас ${L.description.length}`);
+      const [dmin, dmax] = lang.descRange;
+      if (L.description.length < dmin || L.description.length > dmax) {
+        fail(`${at} [${lang.code}]: description должен быть ${dmin}–${dmax} символов, сейчас ${L.description.length}`);
       }
       if (!Number.isInteger(L.readingMinutes) || L.readingMinutes < 1) {
         fail(`${at} [${lang.code}]: readingMinutes должно быть целым числом больше нуля`);

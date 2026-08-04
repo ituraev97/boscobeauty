@@ -168,12 +168,14 @@
         "ogDescription": "What a manicure costs in Tashkent, the types on offer and how to pick a technician."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "塔什干美甲：种类、价格与如何挑选美甲师",
+        "cardTitle": "塔什干美甲：有哪些种类、价格如何、怎样挑选美甲师",
+        "description": "美甲有哪几种做法，在塔什干做一次要多少钱（苏姆与人民币对照），甲油胶能保持多久，以及怎样在坐下后的前十五分钟判断美甲师的操作是否安全。BOSCO 出品。",
+        "excerpt": "苏姆与人民币对照的全城均价、机打与混合做法的区别，以及前十五分钟要看的几个信号。",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "塔什干美甲",
+        "ogDescription": "塔什干美甲的种类、价格与挑选美甲师的方法。"
       }
     }
   },
@@ -346,12 +348,14 @@
         "ogDescription": "What hard water, heat and dry air do to hair in Tashkent, and what actually helps."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "塔什干头发护理：硬水、烈日与干燥空气",
+        "cardTitle": "在塔什干护理头发：硬水、烈日和极干燥的空气怎么应对",
+        "description": "为什么头发在塔什干更快失去光泽、更容易打结，当地的硬水和夏季强日照究竟做了什么，冬天供暖季又该怎么办，以及哪些护理方式真正有效。来自 BOSCO 的建议。",
+        "excerpt": "硬水、夏季烈日与供暖季——以及分别能抵消它们的简单习惯。",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "塔什干头发护理",
+        "ogDescription": "硬水、高温与干燥空气对头发的影响，以及什么护理真正有效。"
       }
     }
   }

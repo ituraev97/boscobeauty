@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BOSCO Beauty Club 博客</title>
+    <link>https://boscobeauty.uz/blog/zh/</link>
+    <atom:link href="https://boscobeauty.uz/blog/zh/rss.xml" rel="self" type="application/rss+xml"/>
+    <description>BOSCO Beauty Club 美容师撰写的美甲、头发、眉睫、足部护理以及塔什干气候下的护理文章。</description>
+    <language>zh</language>
+    <lastBuildDate>Tue, 04 Aug 2026 09:00:00 GMT</lastBuildDate>
+    <item>
+      <title>塔什干美甲：有哪些种类、价格如何、怎样挑选美甲师</title>
+      <link>https://boscobeauty.uz/blog/zh/manikyur-tashkent-ceny</link>
+      <guid isPermaLink="true">https://boscobeauty.uz/blog/zh/manikyur-tashkent-ceny</guid>
+      <category>美甲</category>
+      <pubDate>Tue, 04 Aug 2026 09:00:00 GMT</pubDate>
+      <description>美甲有哪几种做法，在塔什干做一次要多少钱（苏姆与人民币对照），甲油胶能保持多久，以及怎样在坐下后的前十五分钟判断美甲师的操作是否安全。BOSCO 出品。</description>
+    </item>
+    <item>
+      <title>在塔什干护理头发：硬水、烈日和极干燥的空气怎么应对</title>
+      <link>https://boscobeauty.uz/blog/zh/uhod-za-volosami-v-tashkente</link>
+      <guid isPermaLink="true">https://boscobeauty.uz/blog/zh/uhod-za-volosami-v-tashkente</guid>
+      <category>头发</category>
+      <pubDate>Tue, 04 Aug 2026 09:00:00 GMT</pubDate>
+      <description>为什么头发在塔什干更快失去光泽、更容易打结，当地的硬水和夏季强日照究竟做了什么，冬天供暖季又该怎么办，以及哪些护理方式真正有效。来自 BOSCO 的建议。</description>
+    </item>
+  </channel>
+</rss>
