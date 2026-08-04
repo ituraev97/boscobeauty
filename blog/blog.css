@@ -13,14 +13,14 @@
 .blog-wrap{max-width:720px; margin:0 auto; padding:0 24px;}
 .blog-wrap--wide{max-width:1120px;}
 
-.crumbs{font-size:12.5px; letter-spacing:.3px; color:rgba(248,243,234,.55); margin-bottom:18px;}
+.crumbs{font-size:12.5px; letter-spacing:.3px; color:rgba(248,243,234,.62); margin-bottom:18px;}
 .crumbs a{color:#e9c98f;}
 .crumbs a:hover{text-decoration:underline;}
 .crumbs i{font-style:normal; padding:0 7px; opacity:.45;}
 
 .blog-hero h1{font-family:'Bodoni Moda',serif; font-weight:500; font-size:clamp(26px,4.2vw,40px); line-height:1.18; max-width:640px;}
 .blog-hero .lede{margin-top:16px; font-size:16.5px; color:rgba(248,243,234,.72); max-width:600px;}
-.post-meta{margin-top:20px; font-size:12.5px; color:rgba(248,243,234,.55); letter-spacing:.3px;}
+.post-meta{margin-top:20px; font-size:12.5px; color:rgba(248,243,234,.62); letter-spacing:.3px;}
 .post-meta i{font-style:normal; padding:0 8px; opacity:.45;}
 
 /* ---- Тело статьи ---- */
@@ -93,7 +93,7 @@ table.cmp tr:last-child td{border-bottom:none;}
 .blog-list{padding:56px 0 96px;}
 .cat-radio{position:absolute; left:-9999px; width:1px; height:1px; opacity:0;}
 .cat-filter{display:flex; gap:9px; flex-wrap:wrap; margin-bottom:30px;}
-.cat-filter label{padding:9px 18px; border:1px solid rgba(29,24,21,.22); border-radius:30px; font-size:13px; font-weight:500; color:#4a423b; cursor:pointer; user-select:none;}
+.cat-filter label{display:inline-flex; align-items:center; min-height:44px; padding:0 18px; border:1px solid rgba(29,24,21,.22); border-radius:30px; font-size:13px; font-weight:500; color:#4a423b; cursor:pointer; user-select:none;}
 .cat-filter label:hover{border-color:var(--wine);}
 #cat-all:checked   ~ .cat-filter label[for="cat-all"],
 #cat-nails:checked ~ .cat-filter label[for="cat-nails"],

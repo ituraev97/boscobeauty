@@ -15,6 +15,11 @@
     {{CATEGORY}}     — одна из: Ногти · Волосы · Брови и ресницы · Подология · Полезное
     {{CRUMB}}        — короткое название статьи в хлебных крошках
     {{OG_IMAGE}}     — путь от корня, по умолчанию /og-image.jpg
+
+  Сам шаблон закрыт от индексации: robots=noindex и Disallow в robots.txt.
+  В новой статье обязательно замени noindex на index, follow и добавь строку
+    <link rel="canonical" href="https://boscobeauty.uz/blog/{{SLUG}}">
+  сразу после meta description. Если забыть — tools/build-blog.mjs упадёт с ошибкой.
     {{OG_TITLE}}     — заголовок для соцсетей
     {{OG_DESCRIPTION}} — описание для соцсетей, 1 строка
     {{LEDE}}         — лид-абзац, 2–3 предложения, главный ключ в первых 100 словах
@@ -56,9 +61,8 @@
 <!-- /Yandex.Metrika counter -->
 <title>{{TITLE}}</title>
 <meta name="description" content="{{DESCRIPTION}}">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <meta name="author" content="BOSCO Beauty Club">
-<link rel="canonical" href="https://boscobeauty.uz/blog/{{SLUG}}">
 <link rel="alternate" type="application/rss+xml" title="Блог BOSCO Beauty Club" href="https://boscobeauty.uz/blog/rss.xml">
 
 <meta property="og:type" content="article">
