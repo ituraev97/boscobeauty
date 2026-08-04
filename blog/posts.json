@@ -143,7 +143,9 @@
         "description": "Manikyur qanday turlarga bo'linadi, apparatli va kombinatsiyalangan usul nimasi bilan farq qiladi, Toshkentda narxi qancha va ustani qanday tanlash kerak.",
         "excerpt": "Apparatli va kombinatsiyalangan usul, shahar bo'yicha o'rtacha narxlar va usta xavfsiz ishlayotganini bilish belgilari.",
         "readingMinutes": 6,
-        "published": true
+        "published": true,
+        "crumb": "Toshkentda manikyur",
+        "ogDescription": "Manikyur turlari, Toshkentdagi narxlar va usta tanlash bo'yicha BOSCO ustalari maslahati."
       },
       "en": {
         "title": "",
