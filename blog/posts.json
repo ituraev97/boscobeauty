@@ -23,12 +23,14 @@
         "published": true
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Keratin, hair botox or nanoplasty: which to choose",
+        "cardTitle": "Keratin, hair botox or nanoplasty: what the difference is and which one you want",
+        "description": "How keratin treatment differs from hair botox and nanoplasty, which one suits which hair, how long each lasts and what the aftercare demands. From BOSCO.",
+        "excerpt": "A comparison table on effect, duration and aftercare — and which treatment actually fits your hair.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Keratin and hair botox",
+        "ogDescription": "How keratin treatment, hair botox and nanoplasty differ and which one suits your hair."
       },
       "zh": {
         "title": "",
@@ -56,12 +58,14 @@
         "published": true
       },
       "uz": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Toshkentda go'zallik saloni tanlash: 9 ta belgi | BOSCO",
+        "cardTitle": "Toshkentda go'zallik saloni qanday tanlanadi: yaxshi ustaga tushganingizni bildiradigan 9 belgi",
+        "description": "Instrumentlar sterilizatsiyasi, sharhlar, ochiq narxlar va ustaning ishlari — Toshkentda go'zallik saloni tanlashda nimaga qarash va nima ogohlantirishi kerak.",
+        "excerpt": "Interyer va rasmlar emas: birinchi tashrifdayoq ko'rinadigan to'qqizta belgi va ogohlantiruvchi nuqtalar.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Go'zallik saloni tanlash",
+        "ogDescription": "Toshkentda go'zallik saloni tanlashda nimaga qarash kerak va qaysi belgilar ogohlantiradi."
       },
       "en": {
         "title": "",
@@ -150,12 +154,14 @@
         "ogDescription": "Manikyur turlari, Toshkentdagi narxlar va usta tanlash bo'yicha BOSCO ustalari maslahati."
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Manicure in Tashkent: types, prices, choosing a salon",
+        "cardTitle": "Manicure in Tashkent: the types, what it costs and how to pick a technician",
+        "description": "The types of manicure, what one costs in Tashkent in soum and dollars, how long gel polish lasts and how to tell your technician works safely. From BOSCO.",
+        "excerpt": "City-average prices in soum and dollars, the difference between e-file and combined, and what to check in the first fifteen minutes.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Manicure in Tashkent",
+        "ogDescription": "What a manicure costs in Tashkent, the types on offer and how to pick a technician."
       },
       "zh": {
         "title": "",
@@ -320,12 +326,14 @@
         "ogDescription": "Qattiq suv, jazirama va quruq havo sochga nima qiladi va qanday parvarish yordam beradi."
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Hair care in Tashkent: hard water, sun and dry air",
+        "cardTitle": "Hair care in Tashkent: coping with hard water, sun and very dry air",
+        "description": "Why hair dulls and tangles faster in Tashkent, what hard water and summer sun do to it, and which parts of a routine genuinely help. Advice from BOSCO.",
+        "excerpt": "Hard water, a brutal summer sun and the heating season — and the simple habits that offset each of them.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Hair care in Tashkent",
+        "ogDescription": "What hard water, heat and dry air do to hair in Tashkent, and what actually helps."
       },
       "zh": {
         "title": "",

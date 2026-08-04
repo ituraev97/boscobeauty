@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BOSCO Beauty Club blog</title>
+    <link>https://boscobeauty.uz/blog/en/</link>
+    <atom:link href="https://boscobeauty.uz/blog/en/rss.xml" rel="self" type="application/rss+xml"/>
+    <description>Articles by BOSCO Beauty Club specialists on nails, hair, brows and lashes, podiatry and care in the Tashkent climate.</description>
+    <language>en</language>
+    <lastBuildDate>Tue, 04 Aug 2026 09:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Keratin, hair botox or nanoplasty: what the difference is and which one you want</title>
+      <link>https://boscobeauty.uz/blog/en/botoks-keratin-nanoplastika-volos</link>
+      <guid isPermaLink="true">https://boscobeauty.uz/blog/en/botoks-keratin-nanoplastika-volos</guid>
+      <category>Hair</category>
+      <pubDate>Tue, 04 Aug 2026 09:00:00 GMT</pubDate>
+      <description>How keratin treatment differs from hair botox and nanoplasty, which one suits which hair, how long each lasts and what the aftercare demands. From BOSCO.</description>
+    </item>
+    <item>
+      <title>Manicure in Tashkent: the types, what it costs and how to pick a technician</title>
+      <link>https://boscobeauty.uz/blog/en/manikyur-tashkent-ceny</link>
+      <guid isPermaLink="true">https://boscobeauty.uz/blog/en/manikyur-tashkent-ceny</guid>
+      <category>Nails</category>
+      <pubDate>Tue, 04 Aug 2026 09:00:00 GMT</pubDate>
+      <description>The types of manicure, what one costs in Tashkent in soum and dollars, how long gel polish lasts and how to tell your technician works safely. From BOSCO.</description>
+    </item>
+    <item>
+      <title>Hair care in Tashkent: coping with hard water, sun and very dry air</title>
+      <link>https://boscobeauty.uz/blog/en/uhod-za-volosami-v-tashkente</link>
+      <guid isPermaLink="true">https://boscobeauty.uz/blog/en/uhod-za-volosami-v-tashkente</guid>
+      <category>Hair</category>
+      <pubDate>Tue, 04 Aug 2026 09:00:00 GMT</pubDate>
+      <description>Why hair dulls and tangles faster in Tashkent, what hard water and summer sun do to it, and which parts of a routine genuinely help. Advice from BOSCO.</description>
+    </item>
+  </channel>
+</rss>
