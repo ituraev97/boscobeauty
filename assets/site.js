@@ -14,9 +14,40 @@ if (burger && navLinks) {
 
 // language toggle: swap innerHTML of every element carrying data-ru/data-uz, remembered across pages
 const LANG_KEY = 'bosco_lang';
+const SUPPORTED = ['ru', 'uz', 'en', 'zh'];
 const langBtns = document.querySelectorAll('.lang-btn');
 const translatable = document.querySelectorAll('[data-ru]');
-function setLang(lang){
+
+// Страницы блога отдаются уже на своём языке и объявляют его в data-page-lang.
+// Там интерфейс обязан совпадать со статьёй, а атрибут lang у <html> трогать нельзя:
+// он стоит в разметке и участвует в hreflang и в озвучке скринридером.
+const pageLang = SUPPORTED.includes(document.documentElement.dataset.pageLang || '')
+  ? document.documentElement.dataset.pageLang
+  : null;
+
+// язык браузера — только как подсказка, когда пользователь ещё ничего не выбирал
+function browserLang(){
+  const list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+  for (const raw of list) {
+    const code = String(raw).toLowerCase();
+    if (code.startsWith('zh')) return 'zh';
+    const two = code.slice(0, 2);
+    if (SUPPORTED.includes(two)) return two;
+  }
+  return 'ru';
+}
+
+// Ссылки «Блог» вне самого блога статичны и ведут на русскую витрину. Когда язык
+// интерфейса меняется, подменяем им href, иначе с узбекского сайта попадаешь на
+// русский блог. На страницах блога href уже проставлен генератором — там не трогаем.
+const blogLinks = document.querySelectorAll('a[data-ru="Блог"]');
+function syncBlogLinks(lang){
+  const path = lang === 'ru' ? '/blog/' : `/blog/${lang}/`;
+  blogLinks.forEach(a => { a.setAttribute('href', path); });
+}
+
+function setLang(lang, opts){
+  const o = opts || {};
   translatable.forEach(el => {
     const val = el.getAttribute('data-' + lang) || el.getAttribute('data-ru');
     if (val !== null) el.innerHTML = val;
@@ -24,18 +55,28 @@ function setLang(lang){
   document.querySelectorAll('[data-ph-ru]').forEach(el => {
     el.placeholder = el.getAttribute('data-ph-' + lang) || el.getAttribute('data-ph-ru');
   });
-  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
+  if (!o.keepHtmlLang) document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
   langBtns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
   // award badge: Russian artwork for RU, English artwork for every other language
   document.querySelectorAll('.award-badge').forEach(img => {
     img.src = (lang === 'ru') ? '2gis-award-ru.png' : '2gis-award-en.png';
   });
-  try { localStorage.setItem(LANG_KEY, lang); } catch(e){}
+  if (!o.keepBlogLinks) syncBlogLinks(lang);
+  if (o.remember !== false) { try { localStorage.setItem(LANG_KEY, lang); } catch(e){} }
 }
+
+// В блоге кнопки языков — ссылки на перевод той же статьи: клик и переключит интерфейс,
+// и уведёт на нужный URL. На остальных страницах это обычное переключение на месте.
 langBtns.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
-let savedLang = 'ru';
-try { savedLang = localStorage.getItem(LANG_KEY) || 'ru'; } catch(e){}
-setLang(savedLang);
+
+let stored = null;
+try { stored = localStorage.getItem(LANG_KEY); } catch(e){}
+if (pageLang) {
+  // язык задан страницей: интерфейс подстраиваем под неё, выбор пользователя не перетираем
+  setLang(pageLang, { keepHtmlLang: true, remember: false, keepBlogLinks: true });
+} else {
+  setLang(stored && SUPPORTED.includes(stored) ? stored : browserLang());
+}
 
 // services tabs
 document.querySelectorAll('.svc-tab').forEach(tab => {
