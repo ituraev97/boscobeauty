@@ -95,6 +95,20 @@ const listUrl = (lang) => `${SITE}/blog/${lang.dir}`;
 const postFile = (lang, slug) => `blog/${lang.dir}${slug}.html`;
 const listFile = (lang) => `blog/${lang.dir}index.html`;
 
+// Приводит страницу блога к её языку. Делается на каждой сборке, поэтому не может
+// разъехаться: data-page-lang читает assets/site.js и не подменяет ни интерфейс, ни
+// атрибут lang; ссылки «Блог» в шапке и футере ведут на витрину своего языка, а не
+// на русскую. Оба места опознаются по data-ru="Блог" — обычных ссылок это не касается.
+function applyLangChrome(html, lang) {
+  let out = html.replace(/<html lang="([^"]*)"(?: data-page-lang="[^"]*")?>/,
+    `<html lang="$1" data-page-lang="${lang.code}">`);
+  out = out.replace(/(<a class="nl" href=")\/blog\/[a-z]*\/?("[^>]*data-ru="Блог")/,
+    `$1/blog/${lang.dir}$2`);
+  out = out.replace(/(<a href=")\/blog\/[a-z]*\/?("\s+data-ru="Блог")/,
+    `$1/blog/${lang.dir}$2`);
+  return out;
+}
+
 function replaceRegion(text, name, body, file) {
   const start = `<!-- ${name}:START -->`;
   const end = `<!-- ${name}:END -->`;
@@ -193,7 +207,7 @@ function loadPosts() {
         fail(`${at} [${lang.code}]: в ${file} стоит <meta name="robots" content="${robots}"> — осталось от шаблона. Замени на "index, follow"`);
       }
 
-      const htmlLangAttr = /<html lang="([^"]*)">/.exec(html)?.[1];
+      const htmlLangAttr = /<html lang="([^"]*)"/.exec(html)?.[1];
       if (htmlLangAttr !== lang.htmlLang) {
         fail(`${at} [${lang.code}]: <html lang="${htmlLangAttr}">, ожидается <html lang="${lang.htmlLang}">`);
       }
@@ -331,7 +345,19 @@ function buildList(posts, lang) {
       : '\n<meta name="robots" content="noindex, follow">\n', file);
     out = replaceRegion(out, 'LANGNAV', `\n${langNav(null, lang.code)}\n      `, file);
 
-    if (page === 1) { write(file, out); continue; }
+    out = applyLangChrome(out, lang);
+    // витрина — это листинг, а не статья
+    out = out.replace('<meta property="og:type" content="article">', '<meta property="og:type" content="website">');
+
+    if (page === 1) {
+      const t = /<title>([\s\S]*?)<\/title>/.exec(out)?.[1] ?? '';
+      const d = /<meta name="description" content="([\s\S]*?)">/.exec(out)?.[1] ?? '';
+      const [dmin, dmax] = lang.descRange;
+      if (t.length > lang.titleMax) fail(`витрина ${file}: title длиннее ${lang.titleMax} символов (${t.length}) — «${t}»`);
+      if (d.length < dmin || d.length > dmax) fail(`витрина ${file}: description должен быть ${dmin}–${dmax} символов, сейчас ${d.length}`);
+      write(file, out);
+      continue;
+    }
     out = out
       .replace(/<title>([\s\S]*?)<\/title>/, (_, t) => `<title>${t} — ${page}</title>`)
       .replace(`<link rel="canonical" href="${listUrl(lang)}">`, `<link rel="canonical" href="${canonical}">`)
@@ -364,6 +390,7 @@ function buildArticles(posts) {
         rel.length ? `\n${rel.map((x) => relCardHtml(x, lang)).join('\n\n')}\n        ` : '\n        ', file);
       html = replaceRegion(html, 'HREFLANG', `\n${hreflangBlock(post)}\n`, file);
       html = replaceRegion(html, 'LANGNAV', `\n${langNav(post, lang.code)}\n      `, file);
+      html = applyLangChrome(html, lang);
       write(file, html);
     }
   }

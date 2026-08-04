@@ -72,6 +72,8 @@ out = out.replace(/^<!DOCTYPE html>\n<!--[\s\S]*?-->\n/, '<!DOCTYPE html>\n');  
 
 const map = {
   '{{LANG}}': lang.htmlLang,
+  '{{LANG_CODE}}': code,
+  '{{BLOG_PATH}}': `/blog/${lang.dir}`,
   '{{OG_LOCALE}}': lang.locale,
   '{{IN_LANGUAGE}}': lang.inLang,
   '{{TITLE}}': L.title,
