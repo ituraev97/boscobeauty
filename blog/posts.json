@@ -111,12 +111,14 @@
         "ogDescription": "Laminatsiya qanday o'tadi, kiprik ekishdan farqi va natija qancha saqlanadi."
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Lash and brow lamination: how long it lasts",
+        "cardTitle": "Lash and brow lamination: how it works, who it suits and how long it lasts",
+        "description": "How lash and brow lamination works, how it differs from extensions, how long the result lasts and what the aftercare involves. From BOSCO in Tashkent.",
+        "excerpt": "Your own hairs, nothing glued on: how the appointment goes and why the result holds four to six weeks.",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "Lash and brow lamination",
+        "ogDescription": "How lash and brow lamination works, how it differs from extensions and how long it lasts."
       },
       "zh": {
         "title": "",
@@ -199,12 +201,14 @@
         "ogDescription": "Erkaklar manikyuri nimalardan iborat, qancha vaqt oladi va Toshkentda narxi qancha."
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Men's manicure: what it involves and what it costs",
+        "cardTitle": "Men's manicure: what it involves, why bother and what it costs in Tashkent",
+        "description": "What a men's manicure involves, how it differs from a women's, how long it takes and what it costs in Tashkent. No polish and no awkwardness, from BOSCO.",
+        "excerpt": "No polish, no decoration: how the appointment goes, what it costs and what to expect the first time.",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "Men's manicure",
+        "ogDescription": "What a men's manicure involves, how long it takes and what it costs in Tashkent."
       },
       "zh": {
         "title": "",
@@ -242,12 +246,14 @@
         "ogDescription": "Qachon oddiy pedikyur yetarli bo'lmaydi va podolog kerak bo'ladi."
       },
       "en": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Podiatry or pedicure: when you need a specialist",
+        "cardTitle": "Podiatry or pedicure: what the difference is and when you need a specialist",
+        "description": "Ingrown nails, heel fissures, calluses and fungus — when an ordinary pedicure is not enough and you need a foot care specialist. Explained by BOSCO, Tashkent.",
+        "excerpt": "A pedicure is about how feet look, podiatry about how they work. Where the line falls, and when to see a doctor.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Podiatry or pedicure",
+        "ogDescription": "When an ordinary pedicure is not enough and a foot care specialist is needed."
       },
       "zh": {
         "title": "",
