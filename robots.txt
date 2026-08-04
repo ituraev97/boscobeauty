@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /blog/_template.html
 
 Sitemap: https://boscobeauty.uz/sitemap.xml

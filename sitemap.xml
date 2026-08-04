@@ -5,15 +5,17 @@
   <url><loc>https://boscobeauty.uz/brovi-resnicy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://boscobeauty.uz/volosy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://boscobeauty.uz/podologiya.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- BLOG:START -->
   <url><loc>https://boscobeauty.uz/blog/</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://boscobeauty.uz/blog/manikyur-tashkent-ceny</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://boscobeauty.uz/blog/trendy-manikyura-2026</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://boscobeauty.uz/blog/botoks-keratin-nanoplastika-volos</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://boscobeauty.uz/blog/uhod-za-volosami-v-tashkente</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://boscobeauty.uz/blog/laminirovanie-resnic-i-brovej</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://boscobeauty.uz/blog/podolog-ili-pedikyur</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://boscobeauty.uz/blog/muzhskoy-manikyur</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://boscobeauty.uz/blog/kak-vybrat-salon-krasoty-v-tashkente</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://boscobeauty.uz/blog/laminirovanie-resnic-i-brovej</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://boscobeauty.uz/blog/manikyur-tashkent-ceny</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://boscobeauty.uz/blog/muzhskoy-manikyur</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://boscobeauty.uz/blog/podolog-ili-pedikyur</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://boscobeauty.uz/blog/trendy-manikyura-2026</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://boscobeauty.uz/blog/uhod-za-volosami-v-tashkente</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- BLOG:END -->
   <url><loc>https://boscobeauty.uz/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://boscobeauty.uz/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
