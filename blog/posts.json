@@ -183,12 +183,14 @@
         "published": true
       },
       "uz": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Erkaklar manikyuri: nimalardan iborat va narxi | BOSCO",
+        "cardTitle": "Erkaklar manikyuri: nimalardan iborat, nima uchun kerak va Toshkentda narxi qancha",
+        "description": "Erkaklar manikyuri nima, ayollarnikidan nimasi bilan farq qiladi, qancha vaqt oladi va Toshkentda narxi qancha. Laksiz va noqulaylik yo'q — BOSCO tushuntiradi.",
+        "excerpt": "Laksiz va bezaksiz: muolaja qanday o'tadi, qancha vaqt oladi va birinchi marta nimani kutish kerak.",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "Erkaklar manikyuri",
+        "ogDescription": "Erkaklar manikyuri nimalardan iborat, qancha vaqt oladi va Toshkentda narxi qancha."
       },
       "en": {
         "title": "",
@@ -224,12 +226,14 @@
         "published": true
       },
       "uz": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "Podolog yoki pedikyur: qachon mutaxassis kerak | BOSCO",
+        "cardTitle": "Podolog yoki pedikyur: farqi nimada va qachon mutaxassis kerak bo'ladi",
+        "description": "O'sib chiqayotgan tirnoq, tovon yoriqlari, qadoq va zamburug' — qachon oddiy pedikyur yetarli bo'lmaydi va podolog kerak bo'ladi. Farqini tushuntiramiz.",
+        "excerpt": "Pedikyur oyoq ko'rinishi haqida, podologiya esa uning holati haqida. Chegara qayerdan o'tishini ko'rib chiqamiz.",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "Podolog yoki pedikyur",
+        "ogDescription": "Qachon oddiy pedikyur yetarli bo'lmaydi va podolog kerak bo'ladi."
       },
       "en": {
         "title": "",
