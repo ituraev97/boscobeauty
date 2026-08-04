@@ -22,6 +22,8 @@
   .logo{font-family:'Bodoni Moda',serif; font-weight:700; font-size:26px; letter-spacing:.3px; color:var(--cream); text-shadow:0 0 14px rgba(233,201,143,.5), 0 0 34px rgba(233,201,143,.25);}
   .logo em{font-style:italic; font-weight:600; color:#e9c98f;}
   .logo--footer{font-size:20px;}
+  /* тач-таргет ссылки-логотипа в шапке — не меньше 44px по высоте */
+  nav .logo{min-height:44px; line-height:44px;}
   .nav-links{display:flex; gap:26px; align-items:center;}
   .nav-links a.nl{color:var(--cream); font-size:13.5px; font-weight:500; letter-spacing:.3px; opacity:.85;}
   .lang-toggle{display:flex; border:1px solid rgba(248,243,234,.35); border-radius:20px; overflow:hidden; font-size:11px; font-weight:700;}

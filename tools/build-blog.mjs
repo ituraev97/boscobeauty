@@ -250,6 +250,7 @@ function buildSitemap(posts, totalPages) {
   for (const post of posts) {
     urls.push(`  <url><loc>${SITE}/blog/${post.slug}</loc><lastmod>${post.updated}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`);
   }
+  urls.push(`  <url><loc>${SITE}/blog/rss.xml</loc><lastmod>${posts[0].updated}</lastmod><changefreq>weekly</changefreq><priority>0.3</priority></url>`);
   write('sitemap.xml', replaceRegion(read('sitemap.xml'), 'BLOG', `\n${urls.join('\n')}\n  `, 'sitemap.xml'));
 }
 
