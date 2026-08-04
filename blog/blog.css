@@ -28,12 +28,19 @@
 .post p, .post li{font-size:17px; line-height:1.75; color:#3f3832;}
 .post p{margin-bottom:16px;}
 .post p.lede-p{font-size:18.5px; line-height:1.7; color:#2b2521;}
-.post h2{font-family:'Bodoni Moda',serif; font-weight:500; font-size:clamp(22px,3vw,28px); color:var(--ink); margin:44px 0 14px; scroll-margin-top:92px;}
+.post h2{font-family:'Bodoni Moda',serif; font-weight:500; font-size:clamp(22px,3vw,28px); color:var(--ink); margin:44px 0 14px;}
+/* шапка position:fixed — любой якорь, а не только h2, должен вставать под неё */
+.post [id]{scroll-margin-top:92px;}
 .post h3{font-family:'Bodoni Moda',serif; font-weight:500; font-size:20px; color:var(--ink); margin:28px 0 8px;}
 .post ul, .post ol{padding-left:22px; margin-bottom:20px;}
 .post li{margin-bottom:8px;}
 .post strong{font-weight:600; color:var(--ink);}
 .post a{color:var(--wine); text-decoration:underline; text-underline-offset:2px;}
+/* .post a выше красит и подчёркивает ЛЮБУЮ ссылку внутри статьи, включая кнопки CTA
+   и карточки «Читайте также». Возвращаем им их собственные стили из assets/styles.css. */
+.post a.btn-solid{color:var(--ink); text-decoration:none;}
+.post a.btn-line{color:var(--cream); text-decoration:none;}
+.post a.rel-card{color:var(--ink); text-decoration:none;}
 
 .toc{background:#fff; border:1px solid #e7dccb; border-radius:8px; padding:20px 24px; margin:6px 0 34px;}
 .toc b{display:block; font-size:12.5px; letter-spacing:1.4px; text-transform:uppercase; color:var(--wine); font-weight:600; margin-bottom:12px;}
