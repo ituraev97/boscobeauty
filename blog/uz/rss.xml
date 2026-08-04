@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BOSCO Beauty Club blogi</title>
+    <link>https://boscobeauty.uz/blog/uz/</link>
+    <atom:link href="https://boscobeauty.uz/blog/uz/rss.xml" rel="self" type="application/rss+xml"/>
+    <description>BOSCO Beauty Club ustalarining manikyur, soch, qosh va kiprik, podologiya hamda Toshkent iqlimida parvarish haqidagi maqolalari.</description>
+    <language>uz</language>
+    <lastBuildDate>Tue, 04 Aug 2026 09:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Keratin muolajasi va soch botoksi: farqi nimada va kimga qaysi biri mos keladi</title>
+      <link>https://boscobeauty.uz/blog/uz/botoks-keratin-nanoplastika-volos</link>
+      <guid isPermaLink="true">https://boscobeauty.uz/blog/uz/botoks-keratin-nanoplastika-volos</guid>
+      <category>Sochlar</category>
+      <pubDate>Tue, 04 Aug 2026 09:00:00 GMT</pubDate>
+      <description>Soch botoksi keratin muolajasidan nimasi bilan farq qiladi, kimga qaysi biri mos keladi, samarasi qancha saqlanadi va keyin qanday parvarish kerak.</description>
+    </item>
+    <item>
+      <title>Toshkentda manikyur: qanday turlari bor, narxi qancha va ustani qanday tanlash kerak</title>
+      <link>https://boscobeauty.uz/blog/uz/manikyur-tashkent-ceny</link>
+      <guid isPermaLink="true">https://boscobeauty.uz/blog/uz/manikyur-tashkent-ceny</guid>
+      <category>Tirnoqlar</category>
+      <pubDate>Tue, 04 Aug 2026 09:00:00 GMT</pubDate>
+      <description>Manikyur qanday turlarga bo'linadi, apparatli va kombinatsiyalangan usul nimasi bilan farq qiladi, Toshkentda narxi qancha va ustani qanday tanlash kerak.</description>
+    </item>
+  </channel>
+</rss>

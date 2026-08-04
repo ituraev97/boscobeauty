@@ -109,6 +109,16 @@ table.cmp tr:last-child td{border-bottom:none;}
 #cat-podo:checked   ~ .post-grid .post-card:not(.c-podo),
 #cat-useful:checked ~ .post-grid .post-card:not(.c-useful){display:none;}
 
+/* ---- Переключатель языков: на страницах блога это ссылки, а не кнопки ----
+   assets/styles.css стилизует .lang-toggle button, поэтому вариант с <a> описываем здесь.
+   Активный язык помечен aria-current, а не классом .active: класс переставляет site.js
+   по сохранённому в localStorage выбору, и он не обязан совпадать с языком страницы. */
+.lang-toggle a.lang-btn{display:inline-flex; align-items:center; justify-content:center; color:var(--cream); padding:6px 10px; font-weight:700; opacity:.6; letter-spacing:.4px; white-space:nowrap; text-decoration:none;}
+.lang-toggle a.lang-btn:hover{opacity:.9;}
+.lang-toggle a.lang-btn[aria-current="page"]{background:#e9c98f; color:var(--ink); opacity:1;}
+
+.empty-note{font-size:16px; color:#6a6158; padding:8px 0 4px;}
+
 /* ---- Пагинация витрины ---- */
 .pagination{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:34px;}
 .page-link{display:inline-flex; align-items:center; justify-content:center; min-width:44px; min-height:44px; padding:0 14px; border:1px solid rgba(29,24,21,.22); border-radius:26px; font-size:14px; font-weight:500; color:#4a423b;}
@@ -124,7 +134,7 @@ a.page-link:hover{border-color:var(--wine); color:var(--wine);}
   /* тач-таргеты не меньше 44×44; правила здесь, а не в assets/styles.css, чтобы не трогать общий стиль */
   .toc a{display:flex; align-items:center; min-height:44px;}
   .toc li{margin-bottom:0;}
-  .lang-toggle button{min-height:44px; min-width:44px;}
+  .lang-toggle button, .lang-toggle a.lang-btn{min-height:44px; min-width:44px;}
   .burger{padding:10px 12px; margin:-10px -12px;}
   .rel-grid, .post-grid{grid-template-columns:1fr;}
   .post p, .post li{font-size:17px;}
