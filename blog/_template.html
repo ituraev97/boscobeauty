@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--
+  Шаблон новой статьи блога. В выдачу не попадает: закрыт в robots.txt и не входит в sitemap.
+  Порядок работы — см. CLAUDE.md в корне репозитория.
+
+  Плейсхолдеры:
+    {{SLUG}}         — латиницей через дефис, совпадает с именем файла и slug в posts.json
+    {{TITLE}}        — содержимое <title>, не длиннее 60 символов, дословно как в posts.json
+    {{DESCRIPTION}}  — meta description, 140–160 символов, дословно как в posts.json
+    {{H1}}           — заголовок статьи, ровно один <h1> на страницу
+    {{DATE}}         — дата публикации, ГГГГ-ММ-ДД
+    {{DATE_RU}}      — та же дата прописью, например: 4 августа 2026
+    {{UPDATED}}      — дата последнего изменения, ГГГГ-ММ-ДД
+    {{READING}}      — время чтения в минутах, число
+    {{CATEGORY}}     — одна из: Ногти · Волосы · Брови и ресницы · Подология · Полезное
+    {{CRUMB}}        — короткое название статьи в хлебных крошках
+    {{OG_IMAGE}}     — путь от корня, по умолчанию /og-image.jpg
+    {{OG_TITLE}}     — заголовок для соцсетей
+    {{OG_DESCRIPTION}} — описание для соцсетей, 1 строка
+    {{LEDE}}         — лид-абзац, 2–3 предложения, главный ключ в первых 100 словах
+    {{TOC}}          — пункты оглавления: <li><a href="#anchor">Заголовок H2</a></li>
+    {{BODY}}         — тело статьи: h2/h3, абзацы, списки, при необходимости таблица
+    {{FAQ_HTML}}     — блоки <details> с вопросами и ответами
+    {{FAQ_JSONLD}}   — те же вопросы и ответы в FAQPage, текст обязан совпадать дословно
+-->
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1a1a1a">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XC2MXN1L07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XC2MXN1L07');
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111134513', 'ym');
+
+    ym(111134513, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/111134513" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<meta name="robots" content="index, follow">
+<meta name="author" content="BOSCO Beauty Club">
+<link rel="canonical" href="https://boscobeauty.uz/blog/{{SLUG}}">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{OG_DESCRIPTION}}">
+<meta property="og:url" content="https://boscobeauty.uz/blog/{{SLUG}}">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="BOSCO Beauty Club">
+<meta property="og:image" content="https://boscobeauty.uz{{OG_IMAGE}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://boscobeauty.uz{{OG_IMAGE}}">
+<meta name="twitter:title" content="{{OG_TITLE}}">
+<meta name="twitter:description" content="{{OG_DESCRIPTION}}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{H1}}",
+  "description": "{{OG_DESCRIPTION}}",
+  "datePublished": "{{DATE}}",
+  "dateModified": "{{UPDATED}}",
+  "inLanguage": "ru-RU",
+  "image": "https://boscobeauty.uz{{OG_IMAGE}}",
+  "author": {"@type": "Organization", "name": "BOSCO Beauty Club", "url": "https://boscobeauty.uz/"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "BOSCO Beauty Club",
+    "logo": {"@type": "ImageObject", "url": "https://boscobeauty.uz/web-app-manifest-512x512.png"}
+  },
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://boscobeauty.uz/blog/{{SLUG}}"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://boscobeauty.uz/"},
+    {"@type": "ListItem", "position": 2, "name": "Блог", "item": "https://boscobeauty.uz/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "{{CRUMB}}", "item": "https://boscobeauty.uz/blog/{{SLUG}}"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+{{FAQ_JSONLD}}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://dikidi.net">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/blog/blog.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a href="/index.html" style="text-decoration:none;"><div class="logo">BOSCO <em>Beauty Club</em></div></a>
+  <div class="nav-links" id="navLinks">
+    <a class="nl" href="/index.html#about" data-ru="О нас" data-en="About" data-zh="关于我们" data-uz="Biz haqimizda">О нас</a>
+    <a class="nl" href="/index.html#services" data-ru="Все услуги" data-en="All services" data-zh="全部服务" data-uz="Barcha xizmatlar">Все услуги</a>
+    <a class="nl" href="/blog/" data-ru="Блог" data-en="Blog" data-zh="博客" data-uz="Blog">Блог</a>
+    <a class="nl" href="/index.html#reviews" data-ru="Отзывы" data-en="Reviews" data-zh="顾客评价" data-uz="Sharhlar">Отзывы</a>
+    <a class="nl" href="/index.html#location" data-ru="Контакты" data-en="Contact" data-zh="联系我们" data-uz="Aloqa">Контакты</a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="uz">UZ</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="zh">中文</button>
+    </div>
+    <a class="cta-tg dikidi-widget" href="https://dikidi.net/#widget=214399" data-ru="Записаться 24/7" data-en="Book 24/7" data-zh="24小时预约" data-uz="24/7 onlayn yozilish">Записаться 24/7</a>
+  </div>
+  <button class="burger" id="burger">☰</button>
+</nav>
+
+<!-- TODO: UZ/EN версия статьи -->
+<header class="blog-hero">
+  <div class="blog-wrap">
+    <!-- именно div, а не nav: в assets/styles.css селектор nav{} написан по элементу -->
+    <div class="crumbs" role="navigation" aria-label="Хлебные крошки">
+      <a href="/index.html">Главная</a><i>/</i><a href="/blog/">Блог</a><i>/</i><span>{{CRUMB}}</span>
+    </div>
+    <h1>{{H1}}</h1>
+    <div class="post-meta">{{DATE_RU}}<i>·</i>Чтение ~{{READING}} мин<i>·</i>{{CATEGORY}}</div>
+  </div>
+</header>
+
+<main class="blog-wrap post">
+  <article>
+    <p class="lede-p">{{LEDE}}</p>
+
+    <div class="toc" role="navigation" aria-label="Содержание">
+      <b>Содержание</b>
+      <ol>
+{{TOC}}
+        <li><a href="#faq">Частые вопросы</a></li>
+      </ol>
+    </div>
+
+{{BODY}}
+
+    <section class="faq" id="faq" aria-label="Частые вопросы">
+      <h2>Частые вопросы</h2>
+
+{{FAQ_HTML}}
+    </section>
+
+    <section class="cta-card">
+      <h2>Записаться в BOSCO</h2>
+      <p>Ташкент, ул. Эльбека, 15 — ногти, брови и ресницы, волосы и подология для неё и для него.</p>
+      <ul class="cta-facts">
+        <li>Адрес: Ташкент, ул. Эльбека, 15 (Яшнабадский район)</li>
+        <li>Часы работы: ежедневно, 10:00–20:00</li>
+        <li>Телефон: <a href="tel:+998951207020">+998 95 120 70 20</a></li>
+      </ul>
+      <div class="cta-btns">
+        <a class="btn-solid" href="https://t.me/boscobeauty" target="_blank" rel="noopener">Написать в Telegram</a>
+        <a class="btn-line dikidi-widget" href="https://dikidi.net/#widget=214399">Записаться онлайн 24/7</a>
+      </div>
+    </section>
+
+    <section class="related">
+      <h2>Читайте также</h2>
+      <div class="rel-grid">
+        <!-- RELATED:START -->
+        <!-- Содержимое пересобирает tools/build-blog.mjs — вручную не редактировать -->
+        <!-- RELATED:END -->
+      </div>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <div class="container foot-grid">
+    <div class="logo logo--footer">BOSCO <em>Beauty Club</em></div>
+    <div style="display:flex; gap:16px; flex-wrap:wrap;">
+      <a href="/blog/" data-ru="Блог" data-en="Blog" data-zh="博客" data-uz="Blog">Блог</a>
+      <a href="https://t.me/boscobeauty" target="_blank">Telegram</a>
+      <a href="https://instagram.com/boscobeauty.uz" target="_blank">Instagram</a>
+      <a href="mailto:bubblebeauty@yandex.com">bubblebeauty@yandex.com</a>
+    </div>
+    <div style="display:flex; gap:16px; flex-wrap:wrap;">
+      <a href="/privacy.html" data-ru="Политика конфиденциальности" data-en="Privacy Policy" data-zh="隐私政策" data-uz="Maxfiylik siyosati">Политика конфиденциальности</a>
+      <a href="/terms.html" data-ru="Публичная оферта" data-en="Terms of Service" data-zh="服务条款" data-uz="Ommaviy oferta">Публичная оферта</a>
+    </div>
+    <div data-ru="© 2026 BOSCO Beauty Club, Ташкент" data-en="© 2026 BOSCO Beauty Club, Tashkent" data-zh="© 2026 BOSCO Beauty Club，塔什干" data-uz="© 2026 BOSCO Beauty Club, Toshkent">© 2026 BOSCO Beauty Club, Ташкент</div>
+  </div>
+</footer>
+
+<script src="/assets/site.js"></script>
+<script type="text/javascript" src="https://dikidi.net/assets/js/widget_record/widget2.min.js?v=1773811740"></script>
+</body>
+</html>
