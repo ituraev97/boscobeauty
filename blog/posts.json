@@ -80,12 +80,14 @@
         "ogDescription": "What to look for when choosing a beauty salon in Tashkent, and which red flags matter."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "在塔什干怎么挑美容院：九个信号",
+        "cardTitle": "在塔什干怎么挑美容院：说明你找对了人的九个信号",
+        "description": "器械消毒、评价怎么读、价格是否透明、该看谁的作品——在塔什干挑美容院时具体该看哪几件事，以及哪些信号一出现就应该换一家。BOSCO 为你说明。",
+        "excerpt": "不是看装修：第一次进店就能看到的九件事，以及值得转身走开的警示信号。",
+        "readingMinutes": 7,
+        "published": true,
+        "crumb": "如何挑选美容院",
+        "ogDescription": "在塔什干挑美容院该看什么，以及哪些信号需要警惕。"
       }
     }
   },
@@ -219,12 +221,14 @@
         "ogDescription": "What a men's manicure involves, how long it takes and what it costs in Tashkent."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "男士美甲：包含什么、多少钱",
+        "cardTitle": "男士美甲：包含哪些内容、为什么值得做、在塔什干多少钱",
+        "description": "男士美甲到底做些什么，和女士美甲的区别在哪，需要多长时间，在塔什干价格是多少（苏姆与人民币对照）。不上色、也不必觉得别扭，BOSCO 为你说明。",
+        "excerpt": "不上色、不做装饰：流程如何、价格多少，以及第一次去可以预期什么。",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "男士美甲",
+        "ogDescription": "男士美甲包含哪些内容、需要多久、在塔什干多少钱。"
       }
     }
   },
@@ -309,12 +313,14 @@
         "ogDescription": "The colours, shapes and designs of 2026, and how to work out which suit your hands."
       },
       "zh": {
-        "title": "",
-        "cardTitle": "",
-        "description": "",
-        "excerpt": "",
-        "readingMinutes": 0,
-        "published": false
+        "title": "2026 美甲趋势：颜色、形状与款式",
+        "cardTitle": "2026 美甲趋势：值得开口要的颜色、形状与款式",
+        "description": "2026 年的美甲趋势——奶白与浅蓝、全年不下场的红色、软方形与杏仁形、镜面与珍珠细节。哪一种真正适合你的手，由 BOSCO 的美甲师说明。",
+        "excerpt": "克制胜过复杂：全年不下场的颜色、两种主导形状，以及短指甲适合什么。",
+        "readingMinutes": 6,
+        "published": true,
+        "crumb": "2026 美甲趋势",
+        "ogDescription": "2026 的颜色、形状与款式，以及怎么判断哪一种适合你的手。"
       }
     }
   },
