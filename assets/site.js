@@ -126,13 +126,16 @@ document.querySelectorAll('a[href^="https://t.me/"]').forEach(el => el.addEventL
 document.querySelectorAll('a[href^="tel:"]').forEach(el => el.addEventListener('click', () => trackConversion('phone_click')));
 
 // ---- Google Ads conversion tracking: phone & Telegram clicks (delegated, all pages) ----
+// Значение конверсии не передаём (value/currency) — ценность задана вручную в Google Ads
+// (Настройки → Конверсии → Значение). "Контакт" (звонок) и "Исходящий клик" (Telegram)
+// в Google Ads помечены как второстепенные (Secondary) действия-конверсии: они видны
+// в отчётах, но не используются стратегией "Максимум конверсий" для оптимизации ставок.
+// Основная (Primary) цель — только отправка формы, см. ниже.
 document.addEventListener('click', (e) => {
   if (e.target.closest('a[href^="tel:"]')) {
     if (typeof gtag === 'function') {
       gtag('event', 'conversion', {
-        'send_to': 'AW-18362385957/o7mkCOH9tNocEKWM77NE',
-        'value': 1.0,
-        'currency': 'UZS'
+        'send_to': 'AW-18362385957/o7mkCOH9tNocEKWM77NE'
       });
     }
     return;
@@ -140,15 +143,14 @@ document.addEventListener('click', (e) => {
   if (e.target.closest('a[href^="https://t.me/"]')) {
     if (typeof gtag === 'function') {
       gtag('event', 'conversion', {
-        'send_to': 'AW-18362385957/73aeCNb9rNocEKWM77NE',
-        'value': 1.0,
-        'currency': 'UZS'
+        'send_to': 'AW-18362385957/73aeCNb9rNocEKWM77NE'
       });
     }
   }
 });
 
 // ---- lead form: submit to Netlify Forms, then fire the ad conversion ----
+// Единственная основная (Primary) цель конверсии в Google Ads — это отправка формы.
 (function(){
   const form = document.getElementById('leadForm');
   if (!form) return;
@@ -157,11 +159,17 @@ document.addEventListener('click', (e) => {
   const okBox = document.getElementById('fOk');
   const errBox = document.getElementById('fErr');
   const btn = document.getElementById('fSubmit');
+  const honeypot = form.querySelector('[name="bot-field"]');
+  let submitting = false;
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    if (submitting) return; // защита от повторной отправки по двойному клику
+    submitting = true;
     errBox.style.display = 'none';
     btn.disabled = true;
+
+    let ok = false;
     try {
       const body = new URLSearchParams(new FormData(form)).toString();
       const res = await fetch('/', {
@@ -169,21 +177,39 @@ document.addEventListener('click', (e) => {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body
       });
-      if (!res.ok) throw new Error('bad response');
-      form.style.display = 'none';
-      okBox.style.display = 'block';
-      if (typeof gtag === 'function') {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-18362385957/whGvCNKls9ocEKWM77NE',
-          'value': 1.0,
-          'currency': 'UZS'
-        });
-      }
-      trackConversion('form_submit');
+      // res.redirected: если "/" когда-нибудь начнёт делать редирект, fetch тихо
+      // повторит запрос как GET и получит 200 без реальной отправки формы —
+      // без этой проверки это выглядело бы как успех и ложно засчиталось конверсией.
+      if (!res.ok || res.redirected) throw new Error('bad response');
+      ok = true;
     } catch (err) {
       errBox.style.display = 'block';
       btn.disabled = false;
+      submitting = false;
+      return;
     }
+
+    form.style.display = 'none';
+    okBox.style.display = 'block';
+
+    // Ловушка от спам-ботов: если скрытое поле заполнено, Netlify всё равно
+    // отвечает 200 и тихо отбрасывает заявку — реального лида нет,
+    // конверсию засчитывать не нужно.
+    if (honeypot && honeypot.value) return;
+
+    // Трекинг — отдельным try/catch вне блока отправки формы: если отслеживание
+    // упадёт с ошибкой, это не должно показать пользователю errBox и спровоцировать
+    // повторную отправку уже принятой заявки.
+    try {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18362385957/whGvCNKls9ocEKWM77NE',
+          // transaction_id — чтобы Google Ads отбрасывал возможные дубли конверсии
+          'transaction_id': Date.now().toString(36) + Math.random().toString(36).slice(2)
+        });
+      }
+    } catch (e) {}
+    trackConversion('form_submit');
   });
 })();
 
