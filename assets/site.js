@@ -160,7 +160,21 @@ document.addEventListener('click', (e) => {
   const errBox = document.getElementById('fErr');
   const btn = document.getElementById('fSubmit');
   const honeypot = form.querySelector('[name="bot-field"]');
+  const phoneField = document.getElementById('fPhone');
   let submitting = false;
+
+  // Номер телефона клиента в формат E.164 (+998XXXXXXXXX) для расширенных
+  // конверсий. Без этого автоматический режим Google подхватывал со страницы
+  // первый попавшийся email/телефон — то есть контакты салона из подвала
+  // сайта, а не клиента — и расширенные конверсии не давали никакой пользы.
+  function toE164Uz(raw){
+    if (!raw) return null;
+    let digits = raw.replace(/[^\d]/g, '');
+    if (digits.startsWith('998')) digits = digits;
+    else if (digits.length === 9) digits = '998' + digits;
+    else return null;
+    return '+' + digits;
+  }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -202,6 +216,13 @@ document.addEventListener('click', (e) => {
     // повторную отправку уже принятой заявки.
     try {
       if (typeof gtag === 'function') {
+        const phone = toE164Uz(phoneField && phoneField.value);
+        if (phone) {
+          // Явно передаём телефон клиента для расширенных конверсий —
+          // это должно перекрыть автоматический режим, который иначе
+          // подхватывает со страницы контакты салона, а не клиента.
+          gtag('set', 'user_data', { phone_number: phone });
+        }
         gtag('event', 'conversion', {
           'send_to': 'AW-18362385957/whGvCNKls9ocEKWM77NE',
           // transaction_id — чтобы Google Ads отбрасывал возможные дубли конверсии
