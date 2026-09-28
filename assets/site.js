@@ -170,10 +170,12 @@ document.addEventListener('click', (e) => {
   function toE164Uz(raw){
     if (!raw) return null;
     let digits = raw.replace(/[^\d]/g, '');
-    if (digits.startsWith('998')) digits = digits;
-    else if (digits.length === 9) digits = '998' + digits;
-    else return null;
-    return '+' + digits;
+    if (digits.startsWith('998')) digits = digits.slice(3);
+    // После этой точки в digits должен остаться локальный номер без "998" —
+    // ровно 9 цифр (код оператора + номер), иначе это не похоже на
+    // валидный узбекский номер, и передавать его не стоит.
+    if (digits.length !== 9) return null;
+    return '+998' + digits;
   }
 
   form.addEventListener('submit', async (e) => {
